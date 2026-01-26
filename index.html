@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tropical Escape | Adventure Tour Operator</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark-glass">
+        <div class="container">
+            <a class="navbar-brand brand-font" href="index.html">
+                <i class="bi bi-compass-fill me-2"></i>Tropical Escape
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header border-bottom border-secondary">
+                    <h5 class="offcanvas-title brand-font" id="offcanvasNavbarLabel">Tropical Escape</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 align-items-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="trips.html">Trips</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <!-- Action Buttons Group -->
+                        <li class="nav-item d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0">
+                            <a href="login.html" class="btn btn-outline-light btn-sm">Login</a>
+                            <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center gap-2 ms-lg-2 mt-2 mt-lg-0">
+                            <button id="theme-toggle" class="btn btn-link nav-link p-1 text-white" title="Toggle Theme">
+                                <i class="bi bi-moon-stars-fill"></i>
+                            </button>
+                            <a href="dashboard/index.html"
+                                class="btn btn-secondary btn-sm d-flex align-items-center gap-1" target="_blank">
+                                <i class="bi bi-speedometer2"></i> Dashboard
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section d-flex align-items-center"
+        style="background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'); min-height: 100vh;">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content text-center animate-up">
+            <h1 class="display-3 fw-bold mb-4">Unleash Your Wild Side</h1>
+            <p class="lead mb-5 fs-4">Experience the world's most breathtaking landscapes with premium adventure tours.
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#trips" class="btn btn-accent btn-lg px-5 py-3 rounded-pill">Find Your Adventure</a>
+                <a href="about.html" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill">Learn More</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search/Filter Bar -->
+    <div class="container" style="margin-top: -3rem; position: relative; z-index: 10;">
+        <div class="card border-0 shadow-lg py-4 px-4 bg-body rounded-4">
+            <form action="trips.html" class="row g-3">
+                <div class="col-md-3">
+                    <label for="location" class="form-label fw-bold">Destination</label>
+                    <select class="form-select" id="location">
+                        <option selected>Where strictly?</option>
+                        <option value="bali">Bali, Indonesia</option>
+                        <option value="swiss">Swiss Alps</option>
+                        <option value="patagonia">Patagonia</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="date" class="form-label fw-bold">Date</label>
+                    <input type="date" class="form-control" id="date">
+                </div>
+                <div class="col-md-3">
+                    <label for="type" class="form-label fw-bold">Activity</label>
+                    <select class="form-select" id="type">
+                        <option selected>All Types</option>
+                        <option value="hiking">Hiking</option>
+                        <option value="kayaking">Kayaking</option>
+                        <option value="safari">Safari</option>
+                    </select>
+                </div>
+                <div class="col-md-3 d-flex align-items-end">
+                    <button type="submit" class="btn btn-primary w-100 fw-bold py-2">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Featured Trips -->
+    <section id="trips">
+        <div class="container">
+            <div class="section-title animate-up">
+                <h2>Featured Adventures</h2>
+                <p>Curated trips for the modern explorer. Hand-picked for thrill and comfort.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Trip Card 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="position-relative">
+                            <span class="badge bg-accent position-absolute top-0 start-0 m-3 p-2">Best Seller</span>
+                            <img src="https://images.unsplash.com/photo-1544411656-f404d0c9c34f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                class="card-img-top" alt="Bali Trek" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2 text-muted small">
+                                <span><i class="bi bi-geo-alt-fill me-1 text-secondary"></i> Bali, Indonesia</span>
+                                <span><i class="bi bi-clock-fill me-1 text-secondary"></i> 7 Days</span>
+                            </div>
+                            <h5 class="card-title fw-bold">Volcano Sunrise Trek</h5>
+                            <p class="card-text text-muted small">Hike the sacred Mount Batur and witness a sunrise like
+                                no other. Includes hot springs and temple visits.</p>
+                            <hr class="my-3 opacity-10">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="text-primary fw-bold fs-5">$899</span>
+                                    <span class="text-muted small">/ person</span>
+                                </div>
+                                <a href="trip-details.html"
+                                    class="btn btn-outline-primary btn-sm rounded-pill px-3">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trip Card 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                class="card-img-top" alt="Patagonia" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2 text-muted small">
+                                <span><i class="bi bi-geo-alt-fill me-1 text-secondary"></i> Patagonia, Chile</span>
+                                <span><i class="bi bi-clock-fill me-1 text-secondary"></i> 10 Days</span>
+                            </div>
+                            <h5 class="card-title fw-bold">Patagonia Glaciers</h5>
+                            <p class="card-text text-muted small">Explore the rugged wilderness of Patagonia. Trek
+                                through glaciers and crystal clear lakes.</p>
+                            <hr class="my-3 opacity-10">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="text-primary fw-bold fs-5">$2,450</span>
+                                    <span class="text-muted small">/ person</span>
+                                </div>
+                                <a href="trip-details.html"
+                                    class="btn btn-outline-primary btn-sm rounded-pill px-3">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trip Card 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="position-relative">
+                            <span class="badge bg-secondary position-absolute top-0 start-0 m-3 p-2">New</span>
+                            <img src="https://images.unsplash.com/photo-1516541176184-f3f2db07da16?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                class="card-img-top" alt="Alaska" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2 text-muted small">
+                                <span><i class="bi bi-geo-alt-fill me-1 text-secondary"></i> Alaska, USA</span>
+                                <span><i class="bi bi-clock-fill me-1 text-secondary"></i> 5 Days</span>
+                            </div>
+                            <h5 class="card-title fw-bold">Wild Alaska Kayak</h5>
+                            <p class="card-text text-muted small">Paddle through icy waters and spot whales in their
+                                natural habitat. A true cold water adventure.</p>
+                            <hr class="my-3 opacity-10">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="text-primary fw-bold fs-5">$1,800</span>
+                                    <span class="text-muted small">/ person</span>
+                                </div>
+                                <a href="trip-details.html"
+                                    class="btn btn-outline-primary btn-sm rounded-pill px-3">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="trips.html" class="btn btn-secondary px-4 py-2 rounded-pill">View All Trips <i
+                        class="bi bi-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="bg-body-tertiary">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                class="img-fluid rounded-4 shadow-sm mb-2" alt="Camp">
+                            <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                class="img-fluid rounded-4 shadow-sm" alt="Tent">
+                        </div>
+                        <div class="col-6 mt-4">
+                            <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                class="img-fluid rounded-4 shadow-sm" alt="Hike">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <span class="text-accent fw-bold text-uppercase tracking-wider">Why Choose Us</span>
+                    <h2 class="mb-4">Safety, Comfort, and memories that last a lifetime.</h2>
+                    <p class="text-muted mb-4">We don't just sell tours; we craft experiences. Our guides are certified
+                        experts, and we prioritize sustainable tourism.</p>
+
+                    <div class="d-flex mb-3">
+                        <div class="flex-shrink-0">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
+                                style="width: 50px; height: 50px;">
+                                <i class="bi bi-shield-check fs-4"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5 class="fw-bold">Safety First</h5>
+                            <p class="text-muted small">All guides are WFR certified and we carry satellite
+                                communications.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-3">
+                        <div class="flex-shrink-0">
+                            <div class="bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center"
+                                style="width: 50px; height: 50px;">
+                                <i class="bi bi-tree-fill fs-4"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <h5 class="fw-bold">Eco-Friendly</h5>
+                            <p class="text-muted small">We practice Leave No Trace and support local conservation
+                                efforts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="bg-primary text-white text-center">
+        <div class="container">
+            <h2 class="text-white mb-3">Join the Adventure</h2>
+            <p class="mb-4 text-white-50">Subscribe for exclusive offers and travel inspiration.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control form-control-lg border-0"
+                            placeholder="Your Email Address" aria-label="Email">
+                        <button class="btn btn-accent btn-lg" type="button">Subscribe</button>
+                    </div>
+                    <small class="text-white-50">We respect your privacy. No spam, ever.</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <a href="#" class="h4 text-white text-decoration-none fw-bold brand-font mb-3 d-block">
+                        <i class="bi bi-compass-fill me-2"></i>Tropical Escape
+                    </a>
+                    <p class="text-white-50 small">
+                        Helping you discover the world's hidden gems since 2010. We specialize in small group adventure
+                        travel.
+                    </p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x fs-5"></i></a>
+                        <a href="#"><i class="bi bi-youtube fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2 mb-4">
+                    <h5 class="fw-bold mb-3 text-white">Company</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="careers.html">Careers</a></li>
+                        <li class="mb-2"><a href="blog.html">Blog</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-4">
+                    <h5 class="fw-bold mb-3 text-white">Support</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Help Center</a></li>
+                        <li class="mb-2"><a href="#">Terms of Service</a></li>
+                        <li class="mb-2"><a href="#">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#">Waivers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3 text-white">Contact</h5>
+                    <ul class="list-unstyled text-white-50 small">
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> 123 Adventure Lane, Wild, Earth</li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> hello@tropicalescape.com</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> +1 (555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small text-white-50 mb-0">&copy; 2026 Tropical Escape Tours. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <a href="#" class="btn btn-sm btn-outline-light rounded-circle" title="Back to Top"><i
+                            class="bi bi-arrow-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

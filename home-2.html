@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tropical Escape | Elite Expeditions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark-glass">
+        <div class="container">
+            <a class="navbar-brand brand-font text-white" href="index.html">
+                <i class="bi bi-compass-fill me-2"></i>Tropical Escape
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header border-bottom border-secondary">
+                    <h5 class="offcanvas-title brand-font" id="offcanvasNavbarLabel">Tropical Escape</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
+                        <li class="nav-item"><a class="nav-link active text-accent" href="home-2.html">Home 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="trips.html">Trips</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+
+                        <!-- Actions -->
+                        <li class="nav-item d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0">
+                            <a href="login.html" class="btn btn-outline-light btn-sm">Login</a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center gap-2 ms-lg-2 mt-2 mt-lg-0">
+                            <button id="theme-toggle" class="btn btn-link nav-link p-1 text-white">
+                                <i class="bi bi-moon-stars-fill"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section Style 2 -->
+    <header class="position-relative d-flex align-items-center justify-content-center text-center"
+        style="height: 100vh; background-color: #000;">
+        <div style="position: absolute; top:0; left:0; width:100%; height:100%; overflow:hidden; opacity: 0.6;">
+            <!-- Placeholder for Video Background -->
+            <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                style="width: 100%; height: 100%; object-fit: cover;" alt="Hero">
+        </div>
+        <div class="position-relative z-2 text-white container">
+            <h6 class="text-uppercase letter-spacing-2 mb-3 text-accent fw-bold ls-2">Premium Expeditions</h6>
+            <h1 class="display-1 fw-bold mb-4">Beyond the Horizon</h1>
+            <p class="lead mb-5 px-lg-5 mx-lg-5">Exclusive small-group journeys to the most remote corners of the
+                planet.</p>
+            <a href="trips.html" class="btn btn-light btn-lg rounded-0 px-5">Explore Packages</a>
+        </div>
+    </header>
+
+    <!-- Popular Packages Grid -->
+    <section class="py-5">
+        <div class="container-fluid px-5">
+            <div class="row mb-5 align-items-end">
+                <div class="col-md-8">
+                    <h2 class="display-5 fw-bold">Curated Experiences</h2>
+                    <p class="text-muted">Designed for the discerning traveler.</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <a href="trips.html" class="icon-link icon-link-hover text-decoration-none">
+                        View All Destinations <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <div class="card bg-dark text-white border-0 rounded-0 overflow-hidden h-100">
+                        <img src="https://images.unsplash.com/photo-1542259659439-d45037d25686?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            class="card-img opacity-75" alt="Safari">
+                        <div class="card-img-overlay d-flex flex-column justify-content-end p-4 bg-gradient-to-t">
+                            <h3 class="card-title fw-bold">African Safari</h3>
+                            <p class="card-text">Witness the Great Migration in luxury camps.</p>
+                            <a href="trip-details.html"
+                                class="btn btn-outline-light btn-sm w-50 stretched-link">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-dark text-white border-0 rounded-0 overflow-hidden h-100">
+                        <img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            class="card-img opacity-75" alt="Rainforest">
+                        <div class="card-img-overlay d-flex flex-column justify-content-end p-4">
+                            <h3 class="card-title fw-bold">Amazon Expedition</h3>
+                            <p class="card-text">Deep dive into the lungs of the earth.</p>
+                            <a href="trip-details.html"
+                                class="btn btn-outline-light btn-sm w-50 stretched-link">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-dark text-white border-0 rounded-0 overflow-hidden h-100">
+                        <img src="https://images.unsplash.com/photo-1534067783741-512902f510eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            class="card-img opacity-75" alt="Iceland">
+                        <div class="card-img-overlay d-flex flex-column justify-content-end p-4">
+                            <h3 class="card-title fw-bold">Icelandic Northern Lights</h3>
+                            <p class="card-text">Chasing aurora borealis in the arctic circle.</p>
+                            <a href="trip-details.html"
+                                class="btn btn-outline-light btn-sm w-50 stretched-link">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Numbers Section -->
+    <section class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <h2 class="display-4 fw-bold">15+</h2>
+                    <p class="text-white-50">Years Experience</p>
+                </div>
+                <div class="col-md-3">
+                    <h2 class="display-4 fw-bold">50+</h2>
+                    <p class="text-white-50">Destinations</p>
+                </div>
+                <div class="col-md-3">
+                    <h2 class="display-4 fw-bold">10k+</h2>
+                    <p class="text-white-50">Happy Travelers</p>
+                </div>
+                <div class="col-md-3">
+                    <h2 class="display-4 fw-bold">100%</h2>
+                    <p class="text-white-50">Safety Record</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <a href="#" class="h4 text-white text-decoration-none fw-bold brand-font mb-3 d-block">
+                        <i class="bi bi-compass-fill me-2"></i>Tropical Escape
+                    </a>
+                    <p class="text-white-50 small">
+                        Helping you discover the world's hidden gems since 2010. We specialize in small group adventure
+                        travel.
+                    </p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="text-white-50"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white-50"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white-50"><i class="bi bi-twitter-x fs-5"></i></a>
+                        <a href="#" class="text-white-50"><i class="bi bi-youtube fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2 mb-4">
+                    <h5 class="fw-bold mb-3 text-white">Company</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none">About Us</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Careers</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-white-50 text-decoration-none">Blog</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-4">
+                    <h5 class="fw-bold mb-3 text-white">Support</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Help Center</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Terms of Service</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Waivers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3 text-white">Contact</h5>
+                    <ul class="list-unstyled text-white-50 small">
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> 123 Adventure Lane, Wild, Earth</li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> hello@tropicalescape.com</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> +1 (555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small text-white-50 mb-0">&copy; 2026 Tropical Escape - Niche Division. All rights
+                        reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle" title="Back to Top"><i
+                            class="bi bi-arrow-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
