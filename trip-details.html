@@ -16,402 +16,395 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark-glass">
-            <div class="container">
-                <a class="navbar-brand brand-font" href="index.html">
-                    <i class="bi bi-compass-fill me-2"></i>Tropical Escape
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header border-bottom border-secondary">
-                        <h5 class="offcanvas-title brand-font" id="offcanvasNavbarLabel">Tropical Escape</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 align-items-lg-center">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="trips.html">Trips</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="pricing.html">Pricing</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="blog.html">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact</a>
-                            </li>
-                            <!-- Action Buttons Group -->
-                            <li class="nav-item d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0">
-                                <a href="login.html" class="btn btn-outline-light btn-sm">Login</a>
-                                <a href="register.html" class="btn btn-primary btn-sm">Register</a>
-                            </li>
-                            <li class="nav-item d-flex align-items-center gap-2 ms-lg-2 mt-2 mt-lg-0">
-                                <button id="theme-toggle" class="btn btn-link nav-link p-1 text-white"
-                                    title="Toggle Theme">
-                                    <i class="bi bi-moon-stars-fill"></i>
-                                </button>
-                                <a href="dashboard/index.html"
-                                    class="btn btn-secondary btn-sm d-flex align-items-center gap-1" target="_blank">
-                                    <i class="bi bi-speedometer2"></i> Dashboard
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark-glass">
+        <div class="container">
+            <a class="navbar-brand brand-font" href="index.html">
+                <i class="bi bi-compass-fill me-2"></i>Tropical Escape
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header border-bottom border-secondary">
+                    <h5 class="offcanvas-title brand-font" id="offcanvasNavbarLabel">Tropical Escape</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
                 </div>
-            </div>
-        </nav>
-
-        <!-- Trip Header/Hero (Compact) -->
-        <header class="py-5 mt-5 bg-body-tertiary">
-            <div class="container pt-4">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb small">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item"><a href="trips.html">Trips</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Volcano Sunrise Trek</li>
-                    </ol>
-                </nav>
-                <div class="row align-items-end">
-                    <div class="col-lg-8">
-                        <span class="badge bg-secondary mb-2">Best Seller</span>
-                        <h1 class="fw-bold mb-2">Volcano Sunrise Trek</h1>
-                        <div class="text-muted mb-3 mb-lg-0">
-                            <i class="bi bi-geo-alt-fill me-1"></i> Bali, Indonesia &bull;
-                            <i class="bi bi-clock me-1 ms-2"></i> 7 Days &bull;
-                            <i class="bi bi-lightning-charge me-1 ms-2"></i> Challenging
-                        </div>
-                    </div>
-                    <div class="col-lg-4 text-lg-end">
-                        <h2 class="text-primary fw-bold mb-0">$899</h2>
-                        <p class="text-muted small">per person, excluding flights</p>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <!-- Main Content -->
-        <section class="py-5">
-            <div class="container">
-                <div class="row">
-                    <!-- Left Column (Content) -->
-                    <div class="col-lg-8 pe-lg-5">
-
-                        <!-- Gallery -->
-                        <div id="tripCarousel" class="carousel slide mb-5 rounded-4 overflow-hidden shadow-sm"
-                            data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="https://images.unsplash.com/photo-1544411656-f404d0c9c34f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                                        class="d-block w-100" alt="View 1" style="height: 500px; object-fit: cover;">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                                        class="d-block w-100" alt="View 2" style="height: 500px; object-fit: cover;">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#tripCarousel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 align-items-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="trips.html">Trips</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <!-- Action Buttons Group -->
+                        <li class="nav-item d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0">
+                            <a href="login.html" class="btn btn-outline-light btn-sm">Login</a>
+                            <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center gap-2 ms-lg-2 mt-2 mt-lg-0">
+                            <button id="theme-toggle" class="btn btn-link nav-link p-1 text-white" title="Toggle Theme">
+                                <i class="bi bi-moon-stars-fill"></i>
                             </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#tripCarousel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-
-                        <!-- Tabs -->
-                        <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active rounded-pill px-4" id="itinerary-tab"
-                                    data-bs-toggle="pill" data-bs-target="#itinerary">Itinerary</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link rounded-pill px-4" id="inclusions-tab" data-bs-toggle="pill"
-                                    data-bs-target="#inclusions">Inclusions</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link rounded-pill px-4" id="reviews-tab" data-bs-toggle="pill"
-                                    data-bs-target="#reviews">Reviews</button>
-                            </li>
-                        </ul>
-
-                        <div class="tab-content" id="pills-tabContent">
-                            <!-- Itinerary -->
-                            <div class="tab-pane fade show active" id="itinerary" role="tabpanel">
-                                <h3 class="mb-4 fw-bold">Daily Itinerary</h3>
-                                <div class="border-start border-2 border-primary ps-4 pb-4 position-relative">
-                                    <span
-                                        class="position-absolute top-0 start-0 translate-middle bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
-                                        style="width: 30px; height: 30px; margin-left: -1px;">1</span>
-                                    <h5 class="fw-bold">Arrival in Denpasar</h5>
-                                    <p class="text-muted">Airport pickup and transfer to Ubud. Welcome dinner with the
-                                        guide.</p>
-                                </div>
-                                <div class="border-start border-2 border-primary ps-4 pb-4 position-relative">
-                                    <span
-                                        class="position-absolute top-0 start-0 translate-middle bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
-                                        style="width: 30px; height: 30px; margin-left: -1px;">2</span>
-                                    <h5 class="fw-bold">Ubud Exploration</h5>
-                                    <p class="text-muted">Sacred Monkey Forest and Rice Terraces walk.</p>
-                                </div>
-                                <!-- ... more days ... -->
-                                <div class="border-start border-2 border-primary ps-4 position-relative">
-                                    <span
-                                        class="position-absolute top-0 start-0 translate-middle bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
-                                        style="width: 30px; height: 30px; margin-left: -1px;">7</span>
-                                    <h5 class="fw-bold">Departure</h5>
-                                    <p class="text-muted">Transfer to airport or extension of stay.</p>
-                                </div>
-                            </div>
-
-                            <!-- Inclusions -->
-                            <div class="tab-pane fade" id="inclusions" role="tabpanel">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h5 class="fw-bold text-success mb-3"><i
-                                                class="bi bi-check-circle-fill me-2"></i>What's Included</h5>
-                                        <ul class="list-unstyled">
-                                            <li><i class="bi bi-check2 me-2 text-success"></i> All Accommodations</li>
-                                            <li><i class="bi bi-check2 me-2 text-success"></i> Daily Breakfast</li>
-                                            <li><i class="bi bi-check2 me-2 text-success"></i> Airport Transfers</li>
-                                            <li><i class="bi bi-check2 me-2 text-success"></i> Expert Local Guide</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h5 class="fw-bold text-danger mb-3"><i
-                                                class="bi bi-x-circle-fill me-2"></i>What's
-                                            Not Included</h5>
-                                        <ul class="list-unstyled">
-                                            <li><i class="bi bi-x me-2 text-danger"></i> International Flights</li>
-                                            <li><i class="bi bi-x me-2 text-danger"></i> Travel Insurance</li>
-                                            <li><i class="bi bi-x me-2 text-danger"></i> Alcohol</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Reviews -->
-                            <div class="tab-pane fade" id="reviews" role="tabpanel">
-                                <div class="card bg-body-tertiary border-0 mb-3">
-                                    <div class="card-body">
-                                        <div class="d-flex align-items-center mb-2">
-                                            <i class="bi bi-star-fill text-warning"></i>
-                                            <i class="bi bi-star-fill text-warning"></i>
-                                            <i class="bi bi-star-fill text-warning"></i>
-                                            <i class="bi bi-star-fill text-warning"></i>
-                                            <i class="bi bi-star-fill text-warning"></i>
-                                        </div>
-                                        <p class="mb-1">"Absolutely incredible experience. The guides were professional
-                                            and
-                                            fun."</p>
-                                        <small class="text-muted">- John Doe, USA</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right Sidebar (Booking) -->
-                    <div class="col-lg-4">
-                        <div class="card border-0 shadow-lg sticky-top" style="top: 100px;">
-                            <div class="card-body p-4">
-                                <h4 class="fw-bold mb-4">Book This Trip</h4>
-                                <form>
-                                    <div class="mb-3">
-                                        <label class="form-label fw-bold">Select Date</label>
-                                        <select class="form-select">
-                                            <option>May 15, 2026 - Available</option>
-                                            <option>June 20, 2026 - Limited Slots</option>
-                                            <option>July 10, 2026 - Selling Fast</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label fw-bold">Guests</label>
-                                        <input type="number" class="form-control" value="1" min="1" max="10">
-                                    </div>
-
-                                    <hr>
-                                    <div class="d-flex justify-content-between mb-2">
-                                        <span>$899 x 1 guest</span>
-                                        <span>$899</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between mb-4 fw-bold fs-5">
-                                        <span>Total</span>
-                                        <span class="text-primary">$899</span>
-                                    </div>
-
-                                    <button type="button" class="btn btn-accent w-100 py-3 fw-bold rounded"
-                                        data-bs-toggle="modal" data-bs-target="#bookingModal">
-                                        Request Booking
-                                    </button>
-                                    <small class="text-muted d-block text-center mt-3">
-                                        <i class="bi bi-shield-lock"></i> Secure Payment
-                                    </small>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+                            <a href="dashboard/index.html"
+                                class="btn btn-secondary btn-sm d-flex align-items-center gap-1" target="_blank">
+                                <i class="bi bi-speedometer2"></i> Dashboard
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </nav>
 
-        <!-- Booking & Waiver Modal -->
-        <div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header border-0 pb-0">
-                        <h5 class="modal-title fw-bold">Complete Your Booking</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- Trip Header/Hero (Compact) -->
+    <header class="py-5 mt-5 bg-body-tertiary">
+        <div class="container pt-4">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb small">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="trips.html">Trips</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Volcano Sunrise Trek</li>
+                </ol>
+            </nav>
+            <div class="row align-items-end">
+                <div class="col-lg-8">
+                    <span class="badge bg-secondary mb-2">Best Seller</span>
+                    <h1 class="fw-bold mb-2">Volcano Sunrise Trek</h1>
+                    <div class="text-muted mb-3 mb-lg-0">
+                        <i class="bi bi-geo-alt-fill me-1"></i> Bali, Indonesia &bull;
+                        <i class="bi bi-clock me-1 ms-2"></i> 7 Days &bull;
+                        <i class="bi bi-lightning-charge me-1 ms-2"></i> Challenging
                     </div>
-                    <div class="modal-body p-4">
-                        <form id="booking-form">
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <h2 class="text-primary fw-bold mb-0">$899</h2>
+                    <p class="text-muted small">per person, excluding flights</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <!-- Left Column (Content) -->
+                <div class="col-lg-8 pe-lg-5">
+
+                    <!-- Gallery -->
+                    <div id="tripCarousel" class="carousel slide mb-5 rounded-4 overflow-hidden shadow-sm"
+                        data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://images.unsplash.com/photo-1544411656-f404d0c9c34f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                                    class="d-block w-100" alt="View 1" style="height: 500px; object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                                    class="d-block w-100" alt="View 2" style="height: 500px; object-fit: cover;">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#tripCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#tripCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                    <!-- Tabs -->
+                    <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active rounded-pill px-4" id="itinerary-tab" data-bs-toggle="pill"
+                                data-bs-target="#itinerary">Itinerary</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-pill px-4" id="inclusions-tab" data-bs-toggle="pill"
+                                data-bs-target="#inclusions">Inclusions</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-pill px-4" id="reviews-tab" data-bs-toggle="pill"
+                                data-bs-target="#reviews">Reviews</button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="pills-tabContent">
+                        <!-- Itinerary -->
+                        <div class="tab-pane fade show active" id="itinerary" role="tabpanel">
+                            <h3 class="mb-4 fw-bold">Daily Itinerary</h3>
+                            <div class="border-start border-2 border-primary ps-4 pb-4 position-relative">
+                                <span
+                                    class="position-absolute top-0 start-0 translate-middle bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
+                                    style="width: 30px; height: 30px; margin-left: -1px;">1</span>
+                                <h5 class="fw-bold">Arrival in Denpasar</h5>
+                                <p class="text-muted">Airport pickup and transfer to Ubud. Welcome dinner with the
+                                    guide.</p>
+                            </div>
+                            <div class="border-start border-2 border-primary ps-4 pb-4 position-relative">
+                                <span
+                                    class="position-absolute top-0 start-0 translate-middle bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
+                                    style="width: 30px; height: 30px; margin-left: -1px;">2</span>
+                                <h5 class="fw-bold">Ubud Exploration</h5>
+                                <p class="text-muted">Sacred Monkey Forest and Rice Terraces walk.</p>
+                            </div>
+                            <!-- ... more days ... -->
+                            <div class="border-start border-2 border-primary ps-4 position-relative">
+                                <span
+                                    class="position-absolute top-0 start-0 translate-middle bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
+                                    style="width: 30px; height: 30px; margin-left: -1px;">7</span>
+                                <h5 class="fw-bold">Departure</h5>
+                                <p class="text-muted">Transfer to airport or extension of stay.</p>
+                            </div>
+                        </div>
+
+                        <!-- Inclusions -->
+                        <div class="tab-pane fade" id="inclusions" role="tabpanel">
                             <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label">Full Name</label>
-                                    <input type="text" class="form-control" required>
+                                <div class="col-md-6">
+                                    <h5 class="fw-bold text-success mb-3"><i
+                                            class="bi bi-check-circle-fill me-2"></i>What's Included</h5>
+                                    <ul class="list-unstyled">
+                                        <li><i class="bi bi-check2 me-2 text-success"></i> All Accommodations</li>
+                                        <li><i class="bi bi-check2 me-2 text-success"></i> Daily Breakfast</li>
+                                        <li><i class="bi bi-check2 me-2 text-success"></i> Airport Transfers</li>
+                                        <li><i class="bi bi-check2 me-2 text-success"></i> Expert Local Guide</li>
+                                    </ul>
                                 </div>
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label">Email</label>
-                                    <input type="email" class="form-control" required>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label">Phone</label>
-                                    <input type="tel" class="form-control" required>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label">Emergency Contact</label>
-                                    <input type="text" class="form-control" required>
-                                </div>
-                            </div>
-
-                            <div class="alert alert-secondary mt-3">
-                                <h6 class="fw-bold"><i class="bi bi-file-earmark-text me-2"></i>Legal Waiver & Release
-                                    of
-                                    Liability</h6>
-                                <div class="small text-muted" style="max-height: 100px; overflow-y: auto;">
-                                    <p>I hereby acknowledge that I am voluntarily participating in this trip. I
-                                        understand
-                                        that the activities involved may be hazardous... (Full legal text placeholder)
-                                    </p>
+                                <div class="col-md-6">
+                                    <h5 class="fw-bold text-danger mb-3"><i class="bi bi-x-circle-fill me-2"></i>What's
+                                        Not Included</h5>
+                                    <ul class="list-unstyled">
+                                        <li><i class="bi bi-x me-2 text-danger"></i> International Flights</li>
+                                        <li><i class="bi bi-x me-2 text-danger"></i> Travel Insurance</li>
+                                        <li><i class="bi bi-x me-2 text-danger"></i> Alcohol</li>
+                                    </ul>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="mb-3">
-                                <label class="form-label fw-bold">Digital Signature</label>
-                                <div class="border rounded bg-light" style="cursor: crosshair;">
-                                    <canvas id="signature-pad" style="width: 100%; height: 200px;"></canvas>
+                        <!-- Reviews -->
+                        <div class="tab-pane fade" id="reviews" role="tabpanel">
+                            <div class="card bg-body-tertiary border-0 mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                    </div>
+                                    <p class="mb-1">"Absolutely incredible experience. The guides were professional
+                                        and
+                                        fun."</p>
+                                    <small class="text-muted">- John Doe, USA</small>
                                 </div>
-                                <button type="button" class="btn btn-sm btn-link text-decoration-none text-danger"
-                                    id="clear-signature">Clear Signature</button>
                             </div>
+                        </div>
+                    </div>
+                </div>
 
-                            <div class="form-check mb-4">
-                                <input class="form-check-input" type="checkbox" required id="agree">
-                                <label class="form-check-label small" for="agree">
-                                    I agree to the <a href="#">Terms & Conditions</a> and certify that the signature
-                                    above
-                                    is mine.
-                                </label>
-                            </div>
+                <!-- Right Sidebar (Booking) -->
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-lg sticky-top" style="top: 100px;">
+                        <div class="card-body p-4">
+                            <h4 class="fw-bold mb-4">Book This Trip</h4>
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Select Date</label>
+                                    <select class="form-select">
+                                        <option>May 15, 2026 - Available</option>
+                                        <option>June 20, 2026 - Limited Slots</option>
+                                        <option>July 10, 2026 - Selling Fast</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Guests</label>
+                                    <input type="number" class="form-control" value="1" min="1" max="10">
+                                </div>
 
-                            <button type="submit" class="btn btn-primary w-100 py-3 fw-bold">Submit Booking &
-                                Pay</button>
-                        </form>
+                                <hr>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>$899 x 1 guest</span>
+                                    <span>$899</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-4 fw-bold fs-5">
+                                    <span>Total</span>
+                                    <span class="text-primary">$899</span>
+                                </div>
+
+                                <button type="button" class="btn btn-accent w-100 fw-bold" data-bs-toggle="modal"
+                                    data-bs-target="#bookingModal">
+                                    Request Booking
+                                </button>
+                                <small class="text-muted d-block text-center mt-3">
+                                    <i class="bi bi-shield-lock"></i> Secure Payment
+                                </small>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Footer -->
-        <footer class="bg-dark text-white pt-5 pb-3 mt-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 mb-4">
-                        <a href="#" class="h4 text-white text-decoration-none fw-bold brand-font mb-3 d-block">
-                            <i class="bi bi-compass-fill me-2"></i>Tropical Escape
-                        </a>
-                        <p class="text-white-50 small">
-                            Helping you discover the world's hidden gems since 2010. We specialize in small group
-                            adventure
-                            travel.
-                        </p>
-                        <div class="d-flex gap-3 mt-3">
-                            <a href="#" class="text-white-50 hover-text-white"><i class="bi bi-facebook fs-5"></i></a>
-                            <a href="#" class="text-white-50 hover-text-white"><i class="bi bi-instagram fs-5"></i></a>
-                            <a href="#" class="text-white-50 hover-text-white"><i class="bi bi-twitter-x fs-5"></i></a>
-                            <a href="#" class="text-white-50 hover-text-white"><i class="bi bi-youtube fs-5"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-6 col-lg-2 mb-4">
-                        <h5 class="fw-bold mb-3 text-white">Company</h5>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><a href="about.html"
-                                    class="text-white-50 text-decoration-none hover-text-white">About Us</a></li>
-                            <li class="mb-2"><a href="#"
-                                    class="text-white-50 text-decoration-none hover-text-white">Careers</a></li>
-                            <li class="mb-2"><a href="blog.html"
-                                    class="text-white-50 text-decoration-none hover-text-white">Blog</a></li>
-                            <li class="mb-2"><a href="contact.html"
-                                    class="text-white-50 text-decoration-none hover-text-white">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-6 col-lg-2 mb-4">
-                        <h5 class="fw-bold mb-3 text-white">Support</h5>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><a href="#"
-                                    class="text-white-50 text-decoration-none hover-text-white">Help
-                                    Center</a></li>
-                            <li class="mb-2"><a href="#"
-                                    class="text-white-50 text-decoration-none hover-text-white">Terms
-                                    of Service</a></li>
-                            <li class="mb-2"><a href="#"
-                                    class="text-white-50 text-decoration-none hover-text-white">Privacy
-                                    Policy</a></li>
-                            <li class="mb-2"><a href="#"
-                                    class="text-white-50 text-decoration-none hover-text-white">Waivers</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                        <h5 class="fw-bold mb-3 text-white">Contact</h5>
-                        <ul class="list-unstyled text-white-50 small">
-                            <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> 123 Adventure Lane, Wild, Earth</li>
-                            <li class="mb-2"><i class="bi bi-envelope me-2"></i> hello@tropicalescape.com</li>
-                            <li class="mb-2"><i class="bi bi-telephone me-2"></i> +1 (555) 123-4567</li>
-                        </ul>
-                    </div>
+    <!-- Booking & Waiver Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold">Complete Your Booking</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <hr class="border-secondary">
-                <div class="row align-items-center">
-                    <div class="col-md-6 text-center text-md-start">
-                        <p class="small text-white-50 mb-0">&copy; 2026 Tropical Escape Tours. All rights reserved.</p>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle" title="Back to Top"><i
-                                class="bi bi-arrow-up"></i></a>
-                    </div>
+                <div class="modal-body p-4">
+                    <form id="booking-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Phone</label>
+                                <input type="tel" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Emergency Contact</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-secondary mt-3">
+                            <h6 class="fw-bold"><i class="bi bi-file-earmark-text me-2"></i>Legal Waiver & Release
+                                of
+                                Liability</h6>
+                            <div class="small text-muted" style="max-height: 100px; overflow-y: auto;">
+                                <p>I hereby acknowledge that I am voluntarily participating in this trip. I
+                                    understand
+                                    that the activities involved may be hazardous... (Full legal text placeholder)
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Digital Signature</label>
+                            <div class="border rounded bg-light" style="cursor: crosshair;">
+                                <canvas id="signature-pad" style="width: 100%; height: 200px;"></canvas>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-link text-decoration-none text-danger"
+                                id="clear-signature">Clear Signature</button>
+                        </div>
+
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" required id="agree">
+                            <label class="form-check-label small" for="agree">
+                                I agree to the <a href="#">Terms & Conditions</a> and certify that the signature
+                                above
+                                is mine.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 fw-bold">Submit Booking &
+                            Pay</button>
+                    </form>
                 </div>
             </div>
-        </footer>
+        </div>
+    </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/js/main.js"></script>
-        <script src="assets/js/waiver.js"></script>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <a href="#" class="h4 text-white text-decoration-none fw-bold brand-font mb-3 d-block">
+                        <i class="bi bi-compass-fill me-2"></i>Tropical Escape
+                    </a>
+                    <p class="text-white-50 small">
+                        Helping you discover the world's hidden gems since 2010. We specialize in small group
+                        adventure
+                        travel.
+                    </p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="text-white-50 hover-text-white"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white-50 hover-text-white"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white-50 hover-text-white"><i class="bi bi-twitter-x fs-5"></i></a>
+                        <a href="#" class="text-white-50 hover-text-white"><i class="bi bi-youtube fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2 mb-4">
+                    <h5 class="fw-bold mb-3 text-white">Company</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html"
+                                class="text-white-50 text-decoration-none hover-text-white">About Us</a></li>
+                        <li class="mb-2"><a href="#"
+                                class="text-white-50 text-decoration-none hover-text-white">Careers</a></li>
+                        <li class="mb-2"><a href="blog.html"
+                                class="text-white-50 text-decoration-none hover-text-white">Blog</a></li>
+                        <li class="mb-2"><a href="contact.html"
+                                class="text-white-50 text-decoration-none hover-text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-4">
+                    <h5 class="fw-bold mb-3 text-white">Support</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-text-white">Help
+                                Center</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-text-white">Terms
+                                of Service</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-text-white">Privacy
+                                Policy</a></li>
+                        <li class="mb-2"><a href="#"
+                                class="text-white-50 text-decoration-none hover-text-white">Waivers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3 text-white">Contact</h5>
+                    <ul class="list-unstyled text-white-50 small">
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> 123 Adventure Lane, Wild, Earth</li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> hello@tropicalescape.com</li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> +1 (555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small text-white-50 mb-0">&copy; 2026 Tropical Escape Tours. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle" title="Back to Top"><i
+                            class="bi bi-arrow-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/waiver.js"></script>
 </body>
 
 </html>
