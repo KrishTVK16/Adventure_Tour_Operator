@@ -16,7 +16,8 @@ body.admin-body {
 .sidebar {
     width: var(--sidebar-width);
     position: fixed;
-    top: 0;
+    top: 72px;
+    /* Adjusted for Header */
     left: 0;
     bottom: 0;
     background-color: #064E3B;
@@ -29,7 +30,8 @@ body.admin-body {
 
 .main-content {
     margin-left: var(--sidebar-width);
-    padding: 2rem;
+    padding: 100px 2rem 2rem 2rem;
+    /* Added top padding for Header */
     transition: margin-left 0.3s ease;
 }
 
