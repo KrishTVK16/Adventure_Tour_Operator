@@ -76,7 +76,7 @@
 
     <!-- Header -->
     <header class="bg-primary py-5 mt-5">
-        <div class="container py-5">
+        <div class="container py-5 text-center">
             <h1 class="text-white fw-bold display-4 mb-3">Get in Touch</h1>
             <p class="text-white-50 lead">Have questions about our expeditions? We're here to help.</p>
         </div>
@@ -84,42 +84,43 @@
 
     <section>
         <div class="container">
-            <div class="row g-5">
+            <div class="row g-5 align-items-stretch">
+                <!-- Contact Info Card -->
                 <div class="col-lg-5">
-                    <div class="card bg-primary text-white border-0 h-100 shadow">
+                    <div class="card border-0 h-100 shadow rounded-4">
                         <div class="card-body p-5">
-                            <h3 class="fw-bold mb-4">Contact Info</h3>
+                            <h3 class="fw-bold mb-4 text-primary text-center">Contact Info</h3>
                             <ul class="list-unstyled">
                                 <li class="mb-4 d-flex">
                                     <i class="bi bi-geo-alt-fill fs-4 me-3 text-secondary"></i>
                                     <div>
                                         <h6 class="fw-bold mb-0">Headquarters</h6>
-                                        <p class="mb-0 text-white-50">123 Adventure Lane, Wild City, Earth</p>
+                                        <p class="mb-0 text-muted">123 Adventure Lane, Wild City, Earth</p>
                                     </div>
                                 </li>
                                 <li class="mb-4 d-flex">
                                     <i class="bi bi-envelope-fill fs-4 me-3 text-secondary"></i>
                                     <div>
                                         <h6 class="fw-bold mb-0">Email</h6>
-                                        <p class="mb-0 text-white-50">hello@tropicalescape.com</p>
+                                        <p class="mb-0 text-muted">hello@tropicalescape.com</p>
                                     </div>
                                 </li>
                                 <li class="mb-4 d-flex">
                                     <i class="bi bi-telephone-fill fs-4 me-3 text-secondary"></i>
                                     <div>
                                         <h6 class="fw-bold mb-0">Phone</h6>
-                                        <p class="mb-0 text-white-50">+1 (555) 123-4567</p>
+                                        <p class="mb-0 text-muted">+1 (555) 123-4567</p>
                                     </div>
                                 </li>
                             </ul>
                             <div class="mt-5">
-                                <h6 class="fw-bold mb-3">Follow Us</h6>
-                                <div class="d-flex gap-3">
-                                    <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i
+                                <h6 class="fw-bold mb-3 text-center">Follow Us</h6>
+                                <div class="d-flex gap-3 justify-content-center">
+                                    <a href="#" class="btn btn-outline-primary btn-sm rounded-circle"><i
                                             class="bi bi-instagram"></i></a>
-                                    <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i
+                                    <a href="#" class="btn btn-outline-primary btn-sm rounded-circle"><i
                                             class="bi bi-facebook"></i></a>
-                                    <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i
+                                    <a href="#" class="btn btn-outline-primary btn-sm rounded-circle"><i
                                             class="bi bi-twitter-x"></i></a>
                                 </div>
                             </div>
@@ -127,33 +128,41 @@
                     </div>
                 </div>
 
+                <!-- Send Message Card -->
                 <div class="col-lg-7">
-                    <form>
-                        <div class="row g-4 gy-lg-5">
-                            <div class="col-md-6">
-                                <label class="form-label fw-bold">First Name</label>
-                                <input type="text" class="form-control bg-light border-0 py-3" placeholder="John">
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label fw-bold">Last Name</label>
-                                <input type="text" class="form-control bg-light border-0 py-3" placeholder="Doe">
-                            </div>
-                            <div class="col-12">
-                                <label class="form-label fw-bold">Email</label>
-                                <input type="email" class="form-control bg-light border-0 py-3"
-                                    placeholder="john@example.com">
-                            </div>
-                            <div class="col-12">
-                                <label class="form-label fw-bold">Message</label>
-                                <textarea class="form-control bg-light border-0 py-3" rows="5"
-                                    placeholder="Tell us about your dream trip..."></textarea>
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-primary fw-bold">Send
-                                    Message</button>
-                            </div>
+                    <div class="card border-0 h-100 shadow rounded-4">
+                        <div class="card-body p-5">
+                            <h3 class="fw-bold mb-4 text-primary text-center">Send Us a Message</h3>
+                            <form>
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold">First Name</label>
+                                        <input type="text" class="form-control bg-light border-0 py-3"
+                                            placeholder="John">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold">Last Name</label>
+                                        <input type="text" class="form-control bg-light border-0 py-3"
+                                            placeholder="Doe">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label fw-bold">Email</label>
+                                        <input type="email" class="form-control bg-light border-0 py-3"
+                                            placeholder="john@example.com">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label fw-bold">Message</label>
+                                        <textarea class="form-control bg-light border-0 py-3" rows="5"
+                                            placeholder="Tell us about your dream trip..."></textarea>
+                                    </div>
+                                    <div class="col-12 text-center mt-5">
+                                        <button type="submit" class="btn btn-primary fw-bold px-5 rounded-pill">Send
+                                            Message</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
 

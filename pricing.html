@@ -76,7 +76,7 @@
 
     <header>
         <div class="bg-primary py-5 mt-5">
-            <div class="container py-5">
+            <div class="container py-5 text-center">
                 <h1 class="text-white fw-bold display-4 mb-3">Simple Pricing</h1>
                 <p class="text-white-50 lead">Choose the plan that fits your adventure lifestyle.</p>
             </div>
@@ -85,22 +85,24 @@
 
     <section>
         <div class="container">
-            <div class="row g-4 gy-lg-5 justify-content-center pt-4">
+            <div class="row g-4 gy-lg-5 justify-content-center pt-4 align-items-stretch">
 
                 <!-- Basic -->
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-5 text-center">
+                    <div class="card h-100 shadow-sm border border-2 border-transparent">
+                        <div class="card-body p-5 text-center d-flex flex-column">
+                            <div style="min-height: 30px;" class="mb-3"></div>
                             <h4 class="fw-bold text-muted mb-3">Pay As You Go</h4>
                             <h1 class="fw-bold mb-4">Free</h1>
                             <p class="text-muted mb-4">Perfect for the occasional traveler.</p>
-                            <ul class="list-unstyled text-start small mb-5">
+                            <ul class="list-unstyled text-start small mb-5 mt-auto">
                                 <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Access to all public
                                     trips</li>
                                 <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Standard booking
                                     support
                                 </li>
                                 <li class="mb-2"><i class="bi bi-x text-muted me-2"></i> No discounts</li>
+                                <li class="mb-2"><i class="bi bi-x text-muted me-2"></i> Basic customer assistance</li>
                             </ul>
                             <a href="register.html" class="btn btn-outline-primary w-100 rounded-pill">Sign Up
                                 Free</a>
@@ -110,13 +112,15 @@
 
                 <!-- Premium -->
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-lg border-primary border-2 transform-scale">
-                        <div class="card-body p-5 text-center">
-                            <span class="badge bg-accent mb-3">Most Popular</span>
+                    <div class="card h-100 shadow-lg border-primary border-2">
+                        <div class="card-body p-5 text-center d-flex flex-column">
+                            <div style="min-height: 30px;" class="mb-3">
+                                <span class="badge bg-accent">Most Popular</span>
+                            </div>
                             <h4 class="fw-bold text-primary mb-3">Adventurer Club</h4>
                             <h1 class="fw-bold mb-4">$99<span class="fs-6 text-muted fw-normal">/year</span></h1>
                             <p class="text-muted mb-4">For those who live to explore.</p>
-                            <ul class="list-unstyled text-start small mb-5">
+                            <ul class="list-unstyled text-start small mb-5 mt-auto">
                                 <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> <strong>10%
                                         OFF</strong> all trips</li>
                                 <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Priority
@@ -137,23 +141,40 @@
 
                 <!-- Custom -->
                 <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-5 text-center">
+                    <div class="card h-100 shadow-sm border border-2 border-transparent">
+                        <div class="card-body p-5 text-center d-flex flex-column">
+                            <div style="min-height: 30px;" class="mb-3"></div>
                             <h4 class="fw-bold text-muted mb-3">Private Groups</h4>
                             <h1 class="fw-bold mb-4">Custom</h1>
                             <p class="text-muted mb-4">Tailored itineraries for corporate or large groups.</p>
-                            <ul class="list-unstyled text-start small mb-5">
+                            <ul class="list-unstyled text-start small mb-5 mt-auto">
                                 <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Custom dates &
                                     itinerary
                                 </li>
                                 <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Private guides</li>
                                 <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Group discounts</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Priority booking support
+                                </li>
                             </ul>
                             <a href="contact.html" class="btn btn-outline-dark w-100 rounded-pill">Contact Sales</a>
                         </div>
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-body-tertiary">
+        <div class="container text-center">
+            <div class="bg-primary p-4 p-md-5 rounded-4 shadow-lg text-white">
+                <h2 class="fw-bold mb-3 text-white">Ready for your next adventure?</h2>
+                <p class="lead mb-4 text-white-50">Join 25,000+ happy explorers and start your journey today.</p>
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                    <a href="trips.html" class="btn btn-accent rounded-pill px-5">Browse Trips</a>
+                    <a href="contact.html" class="btn btn-outline-light rounded-pill px-5">Contact Us</a>
+                </div>
             </div>
         </div>
     </section>
