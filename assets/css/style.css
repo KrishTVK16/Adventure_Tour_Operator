@@ -358,9 +358,54 @@ footer a:hover {
     color: var(--accent-color) !important;
 }
 
-/* Offcanvas */
+/* Offcanvas / Mobile Menu Fixes */
+.offcanvas {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
 .offcanvas-header {
     background-color: var(--bg-color);
+    border-bottom: 1px solid var(--navbar-border);
+}
+
+.navbar-toggler {
+    border-color: var(--navbar-border) !important;
+    padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(20, 184, 166, 0.25);
+}
+
+/* Ensure nav links are visible in offcanvas across themes */
+.offcanvas .nav-link {
+    color: var(--text-color) !important;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--navbar-border);
+    font-weight: 500;
+}
+
+.offcanvas .nav-link:hover,
+.offcanvas .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Adjust action buttons in mobile menu */
+@media (max-width: 991.98px) {
+    .offcanvas .navbar-nav {
+        padding-top: 1rem;
+    }
+
+    .offcanvas .nav-item {
+        width: 100%;
+    }
+
+    .offcanvas .btn {
+        width: 100%;
+        margin: 0.5rem 0;
+        justify-content: center;
+    }
 }
 
 /* Glassmorphism Backgrounds */
