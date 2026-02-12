@@ -4,15 +4,33 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Sidebar Toggle
-    const sidebarToggle = document.getElementById('sidebar-toggle');
+    // Sidebar Toggle Logic
     const sidebar = document.querySelector('.sidebar');
+    const mobileSidebarToggle = document.getElementById('mobile-sidebar-toggle');
+    const sidebarCloseToggle = document.getElementById('sidebar-close-toggle');
 
-    if (sidebarToggle && sidebar) {
-        sidebarToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('show');
+    // Open Sidebar
+    if (mobileSidebarToggle && sidebar) {
+        mobileSidebarToggle.addEventListener('click', () => {
+            sidebar.classList.add('show');
         });
     }
+
+    // Close Sidebar
+    if (sidebarCloseToggle && sidebar) {
+        sidebarCloseToggle.addEventListener('click', () => {
+            sidebar.classList.remove('show');
+        });
+    }
+
+    // Close sidebar when clicking outside on mobile
+    document.addEventListener('click', (e) => {
+        if (window.innerWidth < 992 && sidebar.classList.contains('show')) {
+            if (!sidebar.contains(e.target) && !mobileSidebarToggle.contains(e.target)) {
+                sidebar.classList.remove('show');
+            }
+        }
+    });
 
     // Initialize Charts if present (using Chart.js)
     if (typeof Chart !== 'undefined') {
