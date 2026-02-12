@@ -6,35 +6,36 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // === Theme Toggle Logic ===
-    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleBtns = document.querySelectorAll('.theme-toggle');
     const htmlElement = document.documentElement;
-    const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
 
     // Check saved preference
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         setTheme(savedTheme);
     } else {
-        // Default to light or check system
         const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         setTheme(systemPrefersDark ? 'dark' : 'light');
     }
 
-    if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', () => {
+    themeToggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
             const currentTheme = htmlElement.getAttribute('data-bs-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
             setTheme(newTheme);
         });
-    }
+    });
 
     function setTheme(theme) {
         htmlElement.setAttribute('data-bs-theme', theme);
         localStorage.setItem('theme', theme);
 
-        if (themeIcon) {
-            themeIcon.className = theme === 'dark' ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill';
-        }
+        themeToggleBtns.forEach(btn => {
+            const icon = btn.querySelector('i');
+            if (icon) {
+                icon.className = theme === 'dark' ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill';
+            }
+        });
     }
 
     // === Navbar Scroll Effect ===
