@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
+  <!-- Circle based on bi-compass-fill -->
+  <path fill="#064E3B" d="M15.5 8.516a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0m-7.5.984a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
+  <!-- Needle based on bi-compass-fill -->
+  <path fill="#064E3B" d="m10.208 5.792-3.964 1.321 1.321 3.964 3.964-1.321-1.321-3.964Z"/>
+</svg>

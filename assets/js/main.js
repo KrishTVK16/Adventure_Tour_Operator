@@ -4,7 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // === Theme Toggle Logic ===
     const themeToggleBtn = document.getElementById('theme-toggle');
     const htmlElement = document.documentElement;
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function setTheme(theme) {
         htmlElement.setAttribute('data-bs-theme', theme);
         localStorage.setItem('theme', theme);
-        
+
         if (themeIcon) {
             themeIcon.className = theme === 'dark' ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill';
         }
@@ -52,4 +52,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl);
     });
+    // === Dynamic Trip Modal Logic ===
+    const tripModal = document.getElementById('tripModal');
+    if (tripModal) {
+        tripModal.addEventListener('show.bs.modal', (event) => {
+            const button = event.relatedTarget; // Button that triggered the modal
+
+            // Extract info from data-bs-* attributes
+            const title = button.getAttribute('data-bs-title');
+            const image = button.getAttribute('data-bs-image');
+            const price = button.getAttribute('data-bs-price');
+            const location = button.getAttribute('data-bs-location');
+            const duration = button.getAttribute('data-bs-duration');
+            const desc = button.getAttribute('data-bs-desc');
+            const badge = button.getAttribute('data-bs-badge');
+
+            // Update modal content
+            tripModal.querySelector('#modalTitle').textContent = title;
+            tripModal.querySelector('#modalImage').src = image;
+            tripModal.querySelector('#modalPrice').textContent = price;
+            tripModal.querySelector('#modalLocation').textContent = location;
+            tripModal.querySelector('#modalDuration').textContent = duration;
+            tripModal.querySelector('#modalDesc').textContent = desc;
+
+            const modalBadge = tripModal.querySelector('#modalBadge');
+            if (badge) {
+                modalBadge.textContent = badge;
+                modalBadge.style.display = 'inline-block';
+            } else {
+                modalBadge.style.display = 'none';
+            }
+        });
+    }
 });
