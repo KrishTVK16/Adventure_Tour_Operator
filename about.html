@@ -17,16 +17,58 @@
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark-glass">
+    <!-- Desktop Navigation (Visible only on LG and up) -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-dark-glass d-none d-lg-block">
         <div class="container">
-            <a class="navbar-brand brand-font text-white" href="index.html">
+            <a class="navbar-brand brand-font" href="index.html">
                 <i class="bi bi-compass-fill me-2"></i>Tropical Escape
             </a>
+            <div class="collapse navbar-collapse" id="desktopNavbarMenu">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="trips.html">Trips</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center gap-2 ms-3">
+                        <a href="login.html" class="btn btn-outline-light btn-sm">Login</a>
+                        <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center gap-2 ms-2">
+                        <button class="btn btn-link nav-link p-1 theme-toggle d-none d-lg-block" title="Toggle Theme">
+                            <i class="bi bi-moon-stars-fill"></i>
+                        </button>
+                        <a href="dashboard/index.html" class="btn btn-secondary btn-sm d-flex align-items-center gap-1"
+                            target="_blank">
+                            <i class="bi bi-speedometer2"></i> Dashboard
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-            <!-- Right side elements for Mobile/Tablet -->
-            <div class="d-flex align-items-center gap-2 d-lg-none">
-                <button class="btn btn-link nav-link p-1 text-white theme-toggle" title="Toggle Theme">
+    <!-- Mobile/Tablet Navigation (Visible only below LG) -->
+    <nav class="navbar fixed-top bg-dark-glass d-lg-none">
+        <div class="container">
+            <a class="navbar-brand brand-font" href="index.html">
+                <i class="bi bi-compass-fill me-2"></i>Tropical Escape
+            </a>
+            <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-link nav-link p-1 theme-toggle" title="Toggle Theme">
                     <i class="bi bi-moon-stars-fill"></i>
                 </button>
                 <button class="navbar-toggler border-0 p-1" type="button" data-bs-toggle="offcanvas"
@@ -34,54 +76,48 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
-
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header border-bottom border-secondary">
-                    <h5 class="offcanvas-title brand-font" id="offcanvasNavbarLabel">Tropical Escape</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 align-items-lg-center">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="trips.html">Trips</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="pricing.html">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                        <!-- Action Buttons Group -->
-                        <li class="nav-item d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0">
-                            <a href="login.html" class="btn btn-outline-light btn-sm">Login</a>
-                            <a href="register.html" class="btn btn-primary btn-sm">Register</a>
-                        </li>
-                        <li class="nav-item d-flex align-items-center gap-2 ms-lg-2 mt-2 mt-lg-0">
-                            <!-- Desktop Theme Toggle -->
-                            <button class="btn btn-link nav-link p-1 text-white theme-toggle d-none d-lg-block"
-                                title="Toggle Theme">
-                                <i class="bi bi-moon-stars-fill"></i>
-                            </button>
-                            <a href="dashboard/index.html"
-                                class="btn btn-secondary btn-sm d-flex align-items-center gap-1" target="_blank">
-                                <i class="bi bi-speedometer2"></i> Dashboard
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </nav>
+
+    <!-- Mobile Offcanvas Menu (Strictly for mobile/tablet) -->
+    <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header border-bottom border-secondary">
+            <h5 class="offcanvas-title brand-font" id="offcanvasNavbarLabel">Tropical Escape</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="trips.html">Trips</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pricing.html">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item mt-3">
+                    <div class="d-grid gap-2">
+                        <a href="login.html" class="btn btn-outline-primary">Login</a>
+                        <a href="register.html" class="btn btn-primary">Register</a>
+                        <a href="dashboard/index.html" class="btn btn-secondary" target="_blank">
+                            <i class="bi bi-speedometer2"></i> Dashboard
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <!-- Header (Small) -->
     <header class="hero-section d-flex align-items-center justify-content-center"

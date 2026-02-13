@@ -13,7 +13,7 @@
     --text-color: #212529;
     --footer-bg: #ffffff;
     --footer-text: #212529;
-    --navbar-bg: rgba(255, 255, 255, 0.95);
+    --navbar-bg: #ffffff;
     --navbar-text: #212529;
     --navbar-border: rgba(0, 0, 0, 0.1);
 }
@@ -41,7 +41,6 @@ body {
     letter-spacing: -0.5px;
 }
 
-/* Navbar */
 /* Navbar */
 .navbar-brand {
     font-size: 1.5rem;
@@ -108,6 +107,28 @@ header.hero-section {
     section {
         padding: 60px 0;
     }
+
+    .hero-section .btn-lg {
+        padding: 0.8rem 1.8rem !important;
+        font-size: 1rem !important;
+    }
+
+    /* Added margin to push buttons away from the overlapping destination card */
+    .hero-section .d-flex.gap-3 {
+        margin-bottom: 2rem !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-section .btn-lg {
+        padding: 0.7rem 1.4rem !important;
+        font-size: 0.9rem !important;
+        width: auto;
+    }
+
+    .hero-section .d-flex.gap-3 {
+        margin-bottom: 3rem !important;
+    }
 }
 
 /* Typography Spacing */
@@ -135,7 +156,8 @@ p {
 }
 
 .section-title p {
-    color: #6c757d;
+    color: var(--text-color);
+    opacity: 0.7;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -350,7 +372,7 @@ footer .text-white {
 
 footer .text-white-50 {
     color: var(--footer-text) !important;
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 footer a:hover {
@@ -360,24 +382,41 @@ footer a:hover {
 /* Offcanvas / Mobile Menu Fixes */
 @media (max-width: 991.98px) {
     .offcanvas {
-        background-color: var(--bg-color) !important;
-        color: var(--text-color) !important;
+        background-color: var(--navbar-bg) !important;
+        color: var(--navbar-text) !important;
     }
 
     .offcanvas-header {
         background-color: var(--bg-color);
         border-bottom: 1px solid var(--navbar-border);
+        padding: 0.8rem 1rem !important;
+        /* More compact header */
+    }
+
+    .offcanvas-title {
+        font-size: 1.1rem !important;
+        /* Smaller title */
     }
 
     .offcanvas-body {
-        background-color: var(--bg-color) !important;
-        display: flex;
-        flex-direction: column;
+        background-color: var(--navbar-bg) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 0.75rem 0.5rem !important;
+        /* Minimal horizontal padding for full width feel */
+        overflow-y: auto !important;
+        height: 100% !important;
     }
 
     .navbar-toggler {
         border-color: var(--navbar-border) !important;
         padding: 0.5rem;
+    }
+
+    /* Fixed header alignment for mobile/tablet */
+    .navbar.fixed-top .container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
     }
 
     .navbar-toggler:focus {
@@ -386,46 +425,100 @@ footer a:hover {
 
     /* Ensure nav links are visible in offcanvas across themes */
     .offcanvas .navbar-nav {
-        padding-top: 1rem;
+        padding: 0 !important;
         display: flex !important;
         flex-direction: column !important;
-        gap: 0.5rem;
+        gap: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+        align-items: stretch !important;
+        /* Force full width items */
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 
     .offcanvas .nav-link {
         color: var(--text-color) !important;
-        padding: 1rem !important;
-        border-bottom: 1px solid var(--navbar-border);
-        font-weight: 500;
-        width: 100%;
+        padding: 0.6rem 0 !important;
+        /* Further reduced vertical spacing */
+        border-bottom: 1px solid var(--navbar-border) !important;
+        font-weight: 500 !important;
+        width: 100% !important;
         display: block !important;
+        transition: all 0.2s ease !important;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 
     .offcanvas .nav-link:hover,
     .offcanvas .nav-link.active {
         color: var(--primary-color) !important;
-        background-color: rgba(var(--primary-color-rgb), 0.05);
+        background-color: rgba(6, 78, 59, 0.05) !important;
     }
 
     .offcanvas .nav-item {
-        width: 100%;
+        width: 100% !important;
+        display: block !important;
     }
 
     .offcanvas .btn {
-        width: 100%;
-        margin: 0.5rem 0;
-        justify-content: center;
+        width: auto !important;
+        min-width: 180px !important;
+        max-width: 240px !important;
+        margin: 0.3rem auto !important;
+        /* Center buttons with vertical spacing */
+        padding: 0.5rem 1.5rem !important;
+        /* Balanced internal padding */
+        font-size: 0.9rem !important;
+        justify-content: center !important;
+        display: flex !important;
+        border-radius: 10px !important;
+        /* Slightly more compact corners */
+    }
+
+    .offcanvas .nav-item.mt-3 {
+        margin-top: 1rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        /* Center the button container */
+        width: 100% !important;
+    }
+
+    .offcanvas .d-grid {
+        display: flex !important;
+        /* Override full-width grid */
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        gap: 0 !important;
     }
 }
 
 /* Glassmorphism Backgrounds */
 /* Glassmorphism Backgrounds */
 .bg-dark-glass {
-    background: rgba(15, 23, 42, 0.9) !important;
+    background: var(--navbar-bg) !important;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--navbar-border);
     transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Ensure text visibility on navbar regardless of bootstrap classes */
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .theme-toggle {
+    color: var(--navbar-text) !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+.navbar .theme-toggle:hover {
+    color: var(--primary-color) !important;
 }
 
 .bg-light-glass {
@@ -436,31 +529,24 @@ footer a:hover {
 }
 
 @media (max-width: 991.98px) {
-    .navbar-dark .navbar-brand {
-        color: #ffffff !important;
-        transition: color 0.3s ease;
-    }
 
-    .navbar-dark .nav-link,
-    .navbar .nav-link.text-white,
-    .theme-toggle.text-white {
+    /* Base text visibility for mobile navbar (off-canvas is handled separately) */
+    .navbar .navbar-brand,
+    .navbar .theme-toggle {
         color: var(--navbar-text) !important;
-        opacity: 0.85;
-        transition: color 0.3s ease;
     }
 
-    .navbar-dark .nav-link:hover,
-    .navbar-dark .nav-link.active {
-        color: var(--accent-color) !important;
-        opacity: 1;
+    /* Adjust toggler icon color using custom SVG backgrounds to remove dependency on bootstrap theme classes */
+    .navbar .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
     }
 
-    /* Force white branding on dark glass for mobile */
-    .bg-dark-glass .navbar-brand,
-    .bg-dark-glass .theme-toggle,
-    .bg-dark-glass .navbar-toggler-icon {
-        color: #ffffff !important;
-        filter: none !important;
+    [data-bs-theme="dark"] .navbar .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
+
+    .navbar-toggler {
+        border-color: var(--navbar-border) !important;
     }
 }
 
@@ -477,6 +563,42 @@ footer a:hover {
 [data-bs-theme="light"] .navbar .btn-outline-light:hover {
     background-color: var(--primary-color) !important;
     color: #ffffff !important;
+}
+
+/* Global Text Visibility Overrides for Theme Sync */
+[data-bs-theme="light"] .text-white {
+    color: var(--text-color) !important;
+}
+
+[data-bs-theme="light"] .text-white-50 {
+    color: var(--text-color) !important;
+    opacity: 0.6 !important;
+}
+
+[data-bs-theme="light"] .list-unstyled.text-white-50 {
+    color: var(--text-color) !important;
+}
+
+[data-bs-theme="light"] .bg-dark .text-white,
+[data-bs-theme="light"] .bg-primary .text-white,
+[data-bs-theme="light"] .cta-section .text-white,
+[data-bs-theme="light"] .footer .text-white {
+    color: #ffffff !important;
+    /* Keep white on actual dark backgrounds */
+}
+
+/* Ensure footer text remains visible in light mode */
+[data-bs-theme="light"] footer .text-white {
+    color: var(--text-color) !important;
+}
+
+[data-bs-theme="light"] footer .text-white-50 {
+    color: var(--text-color) !important;
+    opacity: 0.7 !important;
+}
+
+[data-bs-theme="light"] footer h5.text-white {
+    color: var(--text-color) !important;
 }
 
 /* Contact Page Specifics */
