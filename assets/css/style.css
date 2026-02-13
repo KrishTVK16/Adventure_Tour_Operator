@@ -119,6 +119,46 @@ header.hero-section {
     }
 }
 
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .trip-card .card-body {
+        padding: 1.25rem !important;
+    }
+
+    .trip-card .btn-sm {
+        padding: 0.4rem 0.75rem !important;
+        font-size: 0.75rem !important;
+        white-space: nowrap;
+    }
+
+    .trip-card h5.card-title {
+        font-size: 1.1rem !important;
+    }
+
+    .trip-card .h5.text-primary,
+    .trip-card .fs-5.text-primary {
+        font-size: 1.15rem !important;
+    }
+
+    .trip-card .card-body .d-flex.justify-content-between.align-items-center {
+        gap: 0.3rem;
+    }
+}
+
+/* Specific trip meta adjustment for tablet view only */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .trip-card .card-body .d-flex.justify-content-between.mb-2.text-muted.small {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.25rem !important;
+    }
+
+    .trip-card .card-body .d-flex.justify-content-between.mb-2.text-muted.small span {
+        white-space: nowrap !important;
+        width: 100% !important;
+        text-align: left !important;
+    }
+}
+
 @media (max-width: 575.98px) {
     .hero-section .btn-lg {
         padding: 0.7rem 1.4rem !important;
@@ -203,6 +243,26 @@ p {
 
 .card-body {
     padding: 2rem;
+}
+
+.trip-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.trip-card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.trip-card .card-text {
+    flex-grow: 1;
+    margin-bottom: 1.5rem !important;
+}
+
+.trip-card .card-body>.d-flex:last-child {
+    margin-top: auto;
 }
 
 .card-title {
@@ -496,7 +556,6 @@ footer a:hover {
 }
 
 /* Glassmorphism Backgrounds */
-/* Glassmorphism Backgrounds */
 .bg-dark-glass {
     background: var(--navbar-bg) !important;
     backdrop-filter: blur(12px);
@@ -566,13 +625,23 @@ footer a:hover {
 }
 
 /* Global Text Visibility Overrides for Theme Sync */
-[data-bs-theme="light"] .text-white {
+[data-bs-theme="light"] .text-white:not(.card-img-overlay *):not(.bg-primary *):not(.btn-primary *):not(.btn-accent *) {
     color: var(--text-color) !important;
 }
 
-[data-bs-theme="light"] .text-white-50 {
+[data-bs-theme="light"] .text-white-50:not(.card-img-overlay *) {
     color: var(--text-color) !important;
     opacity: 0.6 !important;
+}
+
+/* Ensure guide text stays white on its overlay */
+.card-img-overlay {
+    color: #ffffff !important;
+}
+
+.card-img-overlay .text-white-50 {
+    color: rgba(255, 255, 255, 0.7) !important;
+    opacity: 1 !important;
 }
 
 [data-bs-theme="light"] .list-unstyled.text-white-50 {
