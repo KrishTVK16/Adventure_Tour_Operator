@@ -18,6 +18,40 @@
     --navbar-border: rgba(0, 0, 0, 0.1);
 }
 
+.bg-primary {
+    background-color: var(--primary-color) !important;
+    color: #ffffff !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary-color) !important;
+    color: #ffffff !important;
+}
+
+.bg-accent {
+    background-color: var(--accent-color) !important;
+    color: #ffffff !important;
+}
+
+.bg-primary a:not(.btn),
+.bg-secondary a:not(.btn),
+.bg-accent a:not(.btn) {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.text-secondary {
+    color: var(--secondary-color) !important;
+}
+
+.text-accent {
+    color: var(--accent-color) !important;
+}
+
 [data-bs-theme="dark"] {
     --primary-color: #10b981;
     --bg-color: #121212;
@@ -100,6 +134,20 @@ section {
 
 header.hero-section {
     padding-top: 80px;
+}
+
+.page-header {
+    padding-top: 100px !important;
+}
+
+.page-header p.lead {
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+[data-bs-theme="dark"] .page-header p.lead {
+    color: #ffffff !important;
+    opacity: 0.85;
 }
 
 @media (max-width: 991.98px) {
@@ -712,9 +760,34 @@ footer a:hover {
     }
 }
 
+.navbar .nav-link {
+    position: relative;
+}
+
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
     color: var(--primary-color) !important;
+    font-weight: 700 !important;
+}
+
+.navbar .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 8px;
+    right: 8px;
+    height: 2px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+@media (max-width: 991.98px) {
+    .navbar .nav-link.active::after {
+        left: 0;
+        right: auto;
+        width: 30px;
+        bottom: 0;
+    }
 }
 
 .navbar .theme-toggle:hover {
@@ -773,13 +846,20 @@ footer a:hover {
 }
 
 /* Global Text Visibility Overrides for Theme Sync */
-[data-bs-theme="light"] .text-white:not(.card-img-overlay *):not(.bg-primary *):not(.btn-primary *):not(.btn-accent *) {
+[data-bs-theme="light"] .text-white:not(.card-img-overlay *):not(.hero-section *):not(.hero-content *):not(.bg-primary):not(.bg-primary *):not(.bg-dark):not(.bg-dark *):not(.bg-accent):not(.bg-accent *):not(.btn-primary *):not(.btn-accent *) {
     color: var(--text-color) !important;
 }
 
-[data-bs-theme="light"] .text-white-50:not(.card-img-overlay *) {
+[data-bs-theme="light"] .text-white-50:not(.card-img-overlay *):not(.hero-section *):not(.hero-content *):not(.bg-primary):not(.bg-primary *):not(.bg-dark):not(.bg-dark *):not(.bg-accent):not(.bg-accent *) {
     color: var(--text-color) !important;
     opacity: 0.6 !important;
+}
+
+[data-bs-theme="light"] .bg-primary .text-white-50,
+[data-bs-theme="light"] .bg-dark .text-white-50,
+[data-bs-theme="light"] .bg-accent .text-white-50 {
+    color: rgba(255, 255, 255, 0.7) !important;
+    opacity: 1 !important;
 }
 
 /* Ensure guide text stays white on its overlay */
@@ -798,10 +878,19 @@ footer a:hover {
 
 [data-bs-theme="light"] .bg-dark .text-white,
 [data-bs-theme="light"] .bg-primary .text-white,
-[data-bs-theme="light"] .cta-section .text-white,
-[data-bs-theme="light"] .footer .text-white {
+[data-bs-theme="light"] .hero-section .text-white,
+[data-bs-theme="light"] .hero-content .text-white,
+[data-bs-theme="light"] .bg-primary h1,
+[data-bs-theme="light"] .bg-primary h2,
+[data-bs-theme="light"] .bg-primary h3,
+[data-bs-theme="light"] .bg-primary h4,
+[data-bs-theme="light"] .bg-primary h5,
+[data-bs-theme="light"] .bg-primary h6,
+[data-bs-theme="light"] .page-header h1,
+[data-bs-theme="light"] .hero-section h1,
+[data-bs-theme="light"] .hero-section h2,
+[data-bs-theme="light"] .hero-section p {
     color: #ffffff !important;
-    /* Keep white on actual dark backgrounds */
 }
 
 /* Ensure footer text remains visible in light mode */
