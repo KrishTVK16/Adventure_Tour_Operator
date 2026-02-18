@@ -95,31 +95,38 @@
             <div class="collapse navbar-collapse" id="desktopNavbarMenu">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home 1</a>
+                        <a class="nav-link fw-bold" href="index.html">Home 1</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="home2.html">Home 2</a>
+                        <a class="nav-link active fw-bold" href="home2.html">Home 2</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link fw-bold" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="trips.html">Trips</a>
+                        <a class="nav-link fw-bold" href="trips.html">Trips</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pricing.html">Pricing</a>
+                        <a class="nav-link fw-bold" href="pricing.html">Pricing</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
+                        <a class="nav-link fw-bold" href="blog.html">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link fw-bold" href="contact.html">Contact</a>
                     </li>
-                    <li class="nav-item d-flex align-items-center gap-2 ms-3">
+                    <li class="nav-item ms-lg-3">
                         <a href="login.html" class="btn btn-outline-light btn-sm">Login</a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
                         <a href="register.html" class="btn btn-primary btn-sm">Register</a>
                     </li>
-                    <li class="nav-item d-flex align-items-center gap-2 ms-2">
+                    <li class="nav-item ms-lg-2">
+                        <a href="dashboard/index.html" class="btn btn-secondary btn-sm d-flex align-items-center gap-1">
+                            <i class="bi bi-speedometer2"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
                         <button class="btn btn-link nav-link p-1 theme-toggle d-none d-lg-block" title="Toggle Theme">
                             <i class="bi bi-moon-stars-fill"></i>
                         </button>
@@ -155,17 +162,20 @@
         </div>
         <div class="offcanvas-body">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
-                <li class="nav-item"><a class="nav-link active" href="home2.html">Home 2</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="trips.html">Trips</a></li>
-                <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="index.html">Home 1</a></li>
+                <li class="nav-item"><a class="nav-link active fw-bold" href="home2.html">Home 2</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="trips.html">Trips</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="pricing.html">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="contact.html">Contact</a></li>
                 <li class="nav-item mt-3">
                     <div class="d-grid gap-2">
                         <a href="login.html" class="btn btn-outline-primary">Login</a>
                         <a href="register.html" class="btn btn-primary">Register</a>
+                        <a href="dashboard/index.html" class="btn btn-secondary">
+                            <i class="bi bi-speedometer2"></i> Dashboard
+                        </a>
                     </div>
                 </li>
             </ul>
@@ -177,10 +187,11 @@
         style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
         <div class="hero-overlay"></div>
         <div class="container position-relative z-2">
-            <div class="row">
-                <div class="col-lg-8 animate-left">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center animate-up">
                     <h1 class="display-2 fw-bold mb-3">Adventure Awaits Beyond the Horizon</h1>
-                    <p class="fs-4 mb-5 opacity-75">Discover hidden gems and breathtaking landscapes with our expert-led
+                    <p class="fs-4 mb-5 opacity-75 mx-auto" style="max-width: 800px;">Discover hidden gems and
+                        breathtaking landscapes with our expert-led
                         adventure tours designed for the modern explorer.</p>
                     <a href="#destinations" class="btn btn-accent btn-lg rounded-pill px-5">Explore Now</a>
                 </div>
@@ -256,7 +267,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 reveal" style="transition-delay: 0.2s;">
                     <div class="feature-box animate-popup delay-1">
-                        <div class="feature-icon bg-secondary"><i class="bi bi-person-check"></i></div>
+                        <div class="feature-icon" style="background: #0EA5E9;"><i class="bi bi-person-check"></i></div>
                         <h5 class="fw-bold">Expert Guides</h5>
                         <p class="text-muted small mb-0">Our guides are seasoned professionals with deep local knowledge
                             and survival skills.</p>
@@ -323,7 +334,7 @@
                                 Nights</div>
                             <h4 class="fw-bold">Mountain Summit Trek</h4>
                             <p class="text-muted small">A challenging trek to the roof of the world. Fully guided with
-                                all equipment included.</p>
+                                all equipment included throughout.</p>
                             <a href="trip-details.html" class="btn btn-primary rounded-pill px-4">Book Now</a>
                         </div>
                     </div>

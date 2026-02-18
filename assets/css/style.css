@@ -541,8 +541,34 @@ footer a:hover {
 
     /* Fixed header alignment for mobile/tablet */
     .navbar.fixed-top .container {
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem !important;
+        margin-right: 0 !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        max-width: 70% !important;
+        letter-spacing: -0.8px !important;
+    }
+
+    @media (max-width: 375px) {
+        .navbar-brand {
+            font-size: 1.1rem !important;
+        }
+
+        .navbar.fixed-top .container {
+            padding-left: 0.5rem !important;
+            padding-right: 0.5rem !important;
+        }
     }
 
     .navbar-toggler:focus {
@@ -816,30 +842,66 @@ footer a:hover {
 }
 
 @media (max-width: 1024px) {
-    .auth-card {
-        width: 95% !important;
-        max-width: 480px !important;
-        padding-left: 1.5rem !important;
-        padding-right: 1.5rem !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
+    .auth-section {
+        padding: 2rem !important;
+        background-color: var(--bg-color);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    /* Tablet Specific Width Adjustment */
+    .auth-section .container {
+        max-width: 100% !important;
+        width: auto !important;
+        padding: 0 !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    .auth-card {
+        width: 100% !important;
+        max-width: 480px !important;
+        /* Mobile default */
+        max-height: 95vh;
+        /* Safety for short viewports */
+        overflow-y: auto;
+        /* Internal scroll if needed */
+        scrollbar-width: none;
+        /* Hide scrollbar for cleaner look */
+        border-radius: 20px !important;
+        margin: auto !important;
+        display: block !important;
+        border: 1px solid var(--navbar-border) !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .auth-card::-webkit-scrollbar {
+        display: none;
+        /* Hide scrollbar for Chrome/Safari */
+    }
+
+    /* Tablet Specific Width - Medium sizing */
     @media (min-width: 768px) {
         .auth-card {
-            width: 90% !important;
             max-width: 650px !important;
         }
     }
 
-    /* Main Auth Button Fix */
+    .auth-card .card-body {
+        padding: 2.5rem !important;
+    }
+
+    /* Main Auth Button Fix - Content aware sizing */
     .auth-section .btn-primary:not(.btn-sm) {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 0.6rem 1.5rem !important;
-        /* Slightly reduced height */
-        font-size: 1rem !important;
+        width: auto !important;
+        min-width: 160px !important;
+        max-width: 240px !important;
+        padding: 0.5rem 2rem !important;
+        font-size: 0.95rem !important;
+        display: inline-flex !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 
     /* Layout Fix: Remember Me & Forgot Password in one row */
@@ -972,9 +1034,14 @@ footer a:hover {
     }
 
     .auth-section .btn {
-        padding: 0.35rem 1rem !important;
+        padding: 0.4rem 1.25rem !important;
         font-size: 0.85rem !important;
         margin-bottom: 0.25rem !important;
+    }
+
+    .auth-section .card {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
     }
 
     .auth-section .mb-4,

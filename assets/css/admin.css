@@ -6,6 +6,7 @@
 
 body.admin-body {
     background-color: var(--admin-bg-light);
+    overflow-x: hidden;
 }
 
 [data-bs-theme="dark"] body.admin-body {
@@ -53,8 +54,8 @@ body.admin-body {
     text-align: center;
 }
 
-/* Mobile Admin Toggle */
-@media (max-width: 991.98px) {
+/* Mobile Admin Toggle (Up to XL - covers all tablets) */
+@media (max-width: 1199.98px) {
     .sidebar {
         transform: translateX(-100%);
     }
@@ -97,7 +98,12 @@ body.admin-body {
 
 .sidebar .navbar-brand {
     color: #FFFFFF !important;
-    /* Ensure visibility on dark green sidebar in all themes */
+    font-size: 1.4rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.5px;
+    opacity: 1 !important;
+    display: flex;
+    align-items: center;
 }
 
 .stats-card {

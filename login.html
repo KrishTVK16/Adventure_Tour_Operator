@@ -20,26 +20,27 @@
     <section class="auth-section">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-5 col-lg-4">
-                    <div class="card border-0 shadow-lg p-4 auth-card">
-                        <div class="card-body">
-                            <div class="text-center mb-4">
+                <div class="col-11 col-sm-10 col-md-8 col-lg-5 mx-auto">
+                    <div class="card border-0 shadow-lg auth-card">
+                        <div class="card-body p-4 p-md-5">
+                            <div class="text-center mb-5">
                                 <a href="index.html" class="navbar-brand brand-font">
                                     <i class="bi bi-compass-fill me-2"></i>Tropical Escape
                                 </a>
-                                <p class="text-muted small mt-3">Welcome back, explorer.</p>
+                                <p class="text-muted small mt-3">Welcome back! Please login to your account.</p>
                             </div>
+
                             <form action="dashboard/index.html">
                                 <div class="mb-3">
                                     <label class="form-label small fw-bold">Email Address</label>
-                                    <input type="email" class="form-control" placeholder="name@example.com">
+                                    <input type="email" class="form-control" placeholder="name@example.com" required>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label small fw-bold">Password</label>
                                     <div class="input-group">
-                                        <input type="password" class="form-control" id="password"
-                                            placeholder="••••••••">
-                                        <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                        <input type="password" class="form-control password-field"
+                                            placeholder="••••••••" required>
+                                        <button class="btn btn-outline-secondary toggle-password" type="button">
                                             <i class="bi bi-eye"></i>
                                         </button>
                                     </div>
@@ -49,31 +50,32 @@
                                         <input class="form-check-input" type="checkbox" id="remember">
                                         <label class="form-check-label small" for="remember">Remember me</label>
                                     </div>
-                                    <a href="#" class="small text-decoration-none">Forgot password?</a>
+                                    <a href="#" class="small text-decoration-none">Forgot?</a>
                                 </div>
-                                <button type="submit"
-                                    class="btn btn-primary w-50 fw-bold mb-3 d-block mx-auto">Login</button>
-
-                                <div class="text-center mb-3">
-                                    <p class="small text-muted mb-2">OR</p>
-                                    <div class="d-flex justify-content-center gap-2">
-                                        <button type="button"
-                                            class="btn btn-outline-secondary btn-sm d-flex align-items-center gap-2">
-                                            <i class="bi bi-google text-danger"></i> Google
-                                        </button>
-                                        <button type="button"
-                                            class="btn btn-primary btn-sm d-flex align-items-center gap-2"
-                                            style="background-color: #1877F2; border-color: #1877F2;">
-                                            <i class="bi bi-facebook"></i> Facebook
-                                        </button>
-                                    </div>
-                                </div>
-
                                 <div class="text-center">
-                                    <span class="small text-muted">Don't have an account? <a href="register.html"
-                                            class="text-decoration-none fw-bold">Register</a></span>
+                                    <button type="submit" class="btn btn-primary fw-bold mb-4 px-5">Login</button>
                                 </div>
                             </form>
+
+                            <!-- Social Login -->
+                            <div class="text-center mb-4">
+                                <p class="small text-muted mb-3">OR CONTINUE WITH</p>
+                                <div class="d-flex justify-content-center gap-3">
+                                    <button type="button"
+                                        class="btn btn-outline-secondary flex-grow-1 d-flex align-items-center justify-content-center gap-2">
+                                        <i class="bi bi-google text-danger"></i> Google
+                                    </button>
+                                    <button type="button"
+                                        class="btn btn-outline-secondary flex-grow-1 d-flex align-items-center justify-content-center gap-2">
+                                        <i class="bi bi-facebook text-primary"></i> Facebook
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="text-center pt-3 border-top">
+                                <p class="small text-muted mb-0">Don't have an account? <a href="register.html"
+                                        class="fw-bold text-decoration-none text-primary">Register</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -81,21 +83,19 @@
         </div>
     </section>
 
-    <!-- Footer Removed -->
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        const togglePassword = document.querySelector('#togglePassword');
-        const password = document.querySelector('#password');
-
-        togglePassword.addEventListener('click', function (e) {
-            // toggle the type attribute
-            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-            password.setAttribute('type', type);
-            // toggle the eye icon
-            this.querySelector('i').classList.toggle('bi-eye');
-            this.querySelector('i').classList.toggle('bi-eye-slash');
+        // Toggle Password Visibility
+        document.querySelectorAll('.toggle-password').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const input = this.parentElement.querySelector('.password-field');
+                const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+                input.setAttribute('type', type);
+                const icon = this.querySelector('i');
+                icon.classList.toggle('bi-eye');
+                icon.classList.toggle('bi-eye-slash');
+            });
         });
     </script>
 </body>
