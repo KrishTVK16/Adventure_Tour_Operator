@@ -665,6 +665,53 @@ footer a:hover {
     transition: all 0.3s ease !important;
 }
 
+/* Tablet & Small Laptop (1024px) Optimization */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .navbar .container {
+        max-width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .navbar-brand {
+        font-size: 1.1rem !important;
+        margin-right: 10px !important;
+    }
+
+    .navbar-nav .nav-link {
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+        font-size: 0.825rem !important;
+        white-space: nowrap !important;
+    }
+
+    .navbar-nav .ms-3,
+    .navbar-nav .ms-auto {
+        margin-left: 8px !important;
+    }
+
+    .navbar-nav .gap-2 {
+        gap: 6px !important;
+    }
+
+    .navbar .btn-sm {
+        padding: 4px 8px !important;
+        font-size: 0.75rem !important;
+        white-space: nowrap !important;
+    }
+
+    /* Prevent any wrapping of nav items */
+    .navbar-collapse {
+        flex-basis: auto !important;
+    }
+
+    .navbar-nav {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+    }
+}
+
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
     color: var(--primary-color) !important;
