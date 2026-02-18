@@ -66,6 +66,38 @@ body.admin-body {
     .sidebar.show {
         transform: translateX(0);
     }
+
+    /* Fixed Sidebar Header for Mobile */
+    .sidebar .d-flex.align-items-center.mb-4.mt-2.px-2 {
+        position: relative;
+    }
+
+    #sidebar-close-toggle {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        padding: 0.2rem 0.4rem !important;
+        /* Reduced padding */
+        font-size: 0.85rem !important;
+        /* Smaller icon size */
+        line-height: 1;
+    }
+
+    .sidebar .navbar-brand {
+        padding-right: 40px;
+        font-size: 1.15rem !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+    }
+}
+
+.sidebar .navbar-brand {
+    color: #FFFFFF !important;
+    /* Ensure visibility on dark green sidebar in all themes */
 }
 
 .stats-card {

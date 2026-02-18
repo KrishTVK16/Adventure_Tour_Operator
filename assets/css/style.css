@@ -812,6 +812,93 @@ footer a:hover {
     border-radius: 20px !important;
     max-width: 450px;
     width: 100%;
+    margin: auto;
+}
+
+@media (max-width: 1024px) {
+    .auth-card {
+        width: 95% !important;
+        max-width: 480px !important;
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Tablet Specific Width Adjustment */
+    @media (min-width: 768px) {
+        .auth-card {
+            width: 90% !important;
+            max-width: 650px !important;
+        }
+    }
+
+    /* Main Auth Button Fix */
+    .auth-section .btn-primary:not(.btn-sm) {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0.6rem 1.5rem !important;
+        /* Slightly reduced height */
+        font-size: 1rem !important;
+    }
+
+    /* Layout Fix: Remember Me & Forgot Password in one row */
+    .auth-section .d-flex.justify-content-between.align-items-center {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        /* Safety wrap to prevent overflow */
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        gap: 10px !important;
+        /* Balanced gap */
+        margin-bottom: 1.5rem !important;
+    }
+
+    .auth-section .form-check {
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .auth-section .small.text-decoration-none,
+    .auth-section .form-check-label {
+        font-size: 0.8rem !important;
+        /* Slightly smaller for better fit */
+        white-space: nowrap;
+    }
+
+    /* Extra small screen optimization */
+    @media (max-width: 375px) {
+        .auth-section .d-flex.justify-content-between.align-items-center {
+            gap: 5px !important;
+        }
+
+        .auth-section .small.text-decoration-none,
+        .auth-section .form-check-label {
+            font-size: 0.75rem !important;
+        }
+    }
+
+    /* Social Buttons Fix: Equal Width & Height */
+    .auth-section .d-flex.justify-content-center.gap-2 {
+        display: flex !important;
+        gap: 0.75rem !important;
+    }
+
+    .auth-section .d-flex.justify-content-center.gap-2 .btn {
+        flex: 1;
+        /* Equal width */
+        padding: 0.5rem 1rem !important;
+        /* Equal padding */
+        height: 42px;
+        /* Fixed height for consistency */
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem !important;
+        white-space: nowrap;
+    }
 }
 
 @media (max-height: 800px) {
@@ -893,5 +980,35 @@ footer a:hover {
     .auth-section .mb-4,
     .auth-section .mb-3 {
         margin-bottom: 0.3rem !important;
+    }
+}
+
+/* 
+ * Pricing Page Tablet Optimizations (768px - 1024px)
+ * Fixes title wrapping and improves spacing
+ */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .row.g-4.gy-lg-5.justify-content-center.pt-4 .card-body {
+        padding: 3rem 1.25rem !important;
+        /* Balanced padding for tablet */
+    }
+
+    .row.g-4.gy-lg-5.justify-content-center.pt-4 h4 {
+        white-space: nowrap;
+        font-size: 1.15rem !important;
+        /* Scale down to prevent overflow */
+        letter-spacing: -0.2px;
+    }
+
+    .row.g-4.gy-lg-5.justify-content-center.pt-4 h1 {
+        white-space: nowrap;
+        font-size: 2.1rem !important;
+        /* Scale down to prevent overflow */
+    }
+
+    /* Ensure the cards themselves have enough room */
+    .row.g-4.gy-lg-5.justify-content-center.pt-4 .col-md-4 {
+        padding-left: 8px;
+        padding-right: 8px;
     }
 }

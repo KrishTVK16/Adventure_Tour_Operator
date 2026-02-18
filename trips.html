@@ -26,7 +26,10 @@
             <div class="collapse navbar-collapse" id="desktopNavbarMenu">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home2.html">Home 2</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
@@ -89,7 +92,10 @@
         <div class="offcanvas-body">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="index.html">Home 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="home2.html">Home 2</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">About</a>
@@ -132,49 +138,58 @@
         <div class="container">
             <div class="row g-lg-5">
                 <!-- Filters Sidebar -->
-                <div class="col-lg-3 mb-5 mb-lg-0">
-                    <div class="card border-0 shadow-sm sticky-top" style="top: 100px; z-index: 10;">
-                        <div class="card-body p-4">
-                            <h5 class="fw-bold mb-4">Filter Trips</h5>
-                            <form>
-                                <div class="mb-4">
-                                    <label
-                                        class="form-label small fw-bold text-uppercase tracking-wider">Duration</label>
-                                    <div class="form-check mb-2">
-                                        <input class="form-check-input" type="checkbox" id="d1">
-                                        <label class="form-check-label text-muted small" for="d1">1-3 Days</label>
+                <div class="col-lg-3 mb-4 mb-lg-0">
+                    <button
+                        class="btn btn-primary d-lg-none w-100 mb-3 d-flex justify-content-between align-items-center"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#filterCollapse" aria-expanded="false"
+                        aria-controls="filterCollapse">
+                        <span><i class="bi bi-filter me-2"></i>Filter Trips</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div class="collapse d-lg-block" id="filterCollapse">
+                        <div class="card border-0 shadow-sm sticky-top" style="top: 100px; z-index: 10;">
+                            <div class="card-body p-4">
+                                <h5 class="fw-bold mb-4 d-none d-lg-block">Filter Trips</h5>
+                                <form>
+                                    <div class="mb-4">
+                                        <label
+                                            class="form-label small fw-bold text-uppercase tracking-wider">Duration</label>
+                                        <div class="form-check mb-2">
+                                            <input class="form-check-input" type="checkbox" id="d1">
+                                            <label class="form-check-label text-muted small" for="d1">1-3 Days</label>
+                                        </div>
+                                        <div class="form-check mb-2">
+                                            <input class="form-check-input" type="checkbox" id="d2">
+                                            <label class="form-check-label text-muted small" for="d2">4-7 Days</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="d3">
+                                            <label class="form-check-label text-muted small" for="d3">8+ Days</label>
+                                        </div>
                                     </div>
-                                    <div class="form-check mb-2">
-                                        <input class="form-check-input" type="checkbox" id="d2">
-                                        <label class="form-check-label text-muted small" for="d2">4-7 Days</label>
+                                    <div class="mb-4">
+                                        <label
+                                            class="form-label small fw-bold text-uppercase tracking-wider">Difficulty</label>
+                                        <select class="form-select form-select-sm">
+                                            <option selected>Any</option>
+                                            <option value="1">Easy</option>
+                                            <option value="2">Moderate</option>
+                                            <option value="3">Challenging</option>
+                                            <option value="4">Extreme</option>
+                                        </select>
                                     </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="d3">
-                                        <label class="form-check-label text-muted small" for="d3">8+ Days</label>
+                                    <div class="mb-4">
+                                        <label class="form-label small fw-bold text-uppercase tracking-wider">Price
+                                            Range</label>
+                                        <input type="range" class="form-range" id="priceRange">
+                                        <div class="d-flex justify-content-between small text-muted">
+                                            <span>$500</span>
+                                            <span>$5000+</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="mb-4">
-                                    <label
-                                        class="form-label small fw-bold text-uppercase tracking-wider">Difficulty</label>
-                                    <select class="form-select form-select-sm">
-                                        <option selected>Any</option>
-                                        <option value="1">Easy</option>
-                                        <option value="2">Moderate</option>
-                                        <option value="3">Challenging</option>
-                                        <option value="4">Extreme</option>
-                                    </select>
-                                </div>
-                                <div class="mb-4">
-                                    <label class="form-label small fw-bold text-uppercase tracking-wider">Price
-                                        Range</label>
-                                    <input type="range" class="form-range" id="priceRange">
-                                    <div class="d-flex justify-content-between small text-muted">
-                                        <span>$500</span>
-                                        <span>$5000+</span>
-                                    </div>
-                                </div>
-                                <button class="btn btn-primary w-100 btn-sm mt-2">Apply Filters</button>
-                            </form>
+                                    <button class="btn btn-primary w-100 btn-sm mt-2">Apply Filters</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
