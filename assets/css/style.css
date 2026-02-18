@@ -317,18 +317,19 @@ p {
 }
 
 .trip-card .card-body {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 1.5rem !important;
 }
 
 .trip-card .card-text {
-    flex-grow: 1;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1.25rem !important;
 }
 
-.trip-card .card-body>.d-flex:last-child {
-    margin-top: auto;
+/* Push the last element to the bottom for horizontal alignment across the row */
+.trip-card .card-body>*:last-child,
+.trip-card .card-body>.mt-auto {
+    margin-top: auto !important;
 }
 
 .card-title {
@@ -659,8 +660,9 @@ footer a:hover {
 /* Ensure text visibility on navbar regardless of bootstrap classes */
 .navbar .navbar-brand,
 .navbar .nav-link,
-.navbar .theme-toggle {
+.theme-toggle {
     color: var(--navbar-text) !important;
+    transition: all 0.3s ease !important;
 }
 
 .navbar .nav-link:hover,
@@ -689,20 +691,27 @@ footer a:hover {
 
     /* Adjust toggler icon color using custom SVG backgrounds to remove dependency on bootstrap theme classes */
     .navbar .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23064E3B' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
     }
 
     [data-bs-theme="dark"] .navbar .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%2310b981' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
     }
 
     .navbar-toggler {
-        border-color: var(--navbar-border) !important;
+        border-color: rgba(6, 78, 59, 0.2) !important;
+        background-color: rgba(6, 78, 59, 0.05) !important;
+    }
+
+    [data-bs-theme="dark"] .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.2) !important;
+        background-color: rgba(255, 255, 255, 0.05) !important;
     }
 }
 
+/* Ensure toggler icon is not inverted in light mode */
 [data-bs-theme="light"] .navbar-toggler-icon {
-    filter: invert(1);
+    filter: none;
 }
 
 /* Fix Login button visibility in light theme */
@@ -843,7 +852,7 @@ footer a:hover {
 
 @media (max-width: 1024px) {
     .auth-section {
-        padding: 2rem !important;
+        padding: 1rem !important;
         background-color: var(--bg-color);
         min-height: 100vh;
         display: flex;
@@ -853,16 +862,14 @@ footer a:hover {
 
     .auth-section .container {
         max-width: 100% !important;
-        width: auto !important;
-        padding: 0 !important;
-        display: flex;
-        justify-content: center;
+        width: 100% !important;
+        padding: 0 0.75rem !important;
     }
 
     .auth-card {
         width: 100% !important;
-        max-width: 480px !important;
-        /* Mobile default */
+        max-width: 100% !important;
+        /* Mobile default - fills col-12 */
         max-height: 95vh;
         /* Safety for short viewports */
         overflow-y: auto;
@@ -884,83 +891,98 @@ footer a:hover {
     /* Tablet Specific Width - Medium sizing */
     @media (min-width: 768px) {
         .auth-card {
-            max-width: 650px !important;
+            max-width: 780px !important;
+            min-height: 550px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+        }
+
+        .auth-card .card-body {
+            padding: 3.5rem !important;
         }
     }
 
-    .auth-card .card-body {
-        padding: 2.5rem !important;
-    }
+    /* Mobile specific padding - ensures content doesn't feel squashed */
+    @media (max-width: 767.98px) {
+        .auth-card .card-body {
+            padding: 1.5rem 1.25rem !important;
+        }
 
-    /* Main Auth Button Fix - Content aware sizing */
-    .auth-section .btn-primary:not(.btn-sm) {
-        width: auto !important;
-        min-width: 160px !important;
-        max-width: 240px !important;
-        padding: 0.5rem 2rem !important;
-        font-size: 0.95rem !important;
-        display: inline-flex !important;
-        justify-content: center !important;
-        align-items: center !important;
+        .auth-card {
+            margin: 0 !important;
+        }
     }
+}
 
-    /* Layout Fix: Remember Me & Forgot Password in one row */
+/* Main Auth Button Fix - Content aware sizing */
+.auth-section .btn-primary:not(.btn-sm) {
+    width: auto !important;
+    min-width: 160px !important;
+    max-width: 240px !important;
+    padding: 0.5rem 2rem !important;
+    font-size: 0.95rem !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+/* Layout Fix: Remember Me & Forgot Password in one row */
+.auth-section .d-flex.justify-content-between.align-items-center {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    /* Safety wrap to prevent overflow */
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 10px !important;
+    /* Balanced gap */
+    margin-bottom: 1.5rem !important;
+}
+
+.auth-section .form-check {
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.auth-section .small.text-decoration-none,
+.auth-section .form-check-label {
+    font-size: 0.8rem !important;
+    /* Slightly smaller for better fit */
+    white-space: nowrap;
+}
+
+/* Extra small screen optimization */
+@media (max-width: 375px) {
     .auth-section .d-flex.justify-content-between.align-items-center {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
-        /* Safety wrap to prevent overflow */
-        justify-content: space-between !important;
-        align-items: center !important;
-        width: 100% !important;
-        gap: 10px !important;
-        /* Balanced gap */
-        margin-bottom: 1.5rem !important;
-    }
-
-    .auth-section .form-check {
-        margin-bottom: 0;
-        flex-shrink: 0;
+        gap: 5px !important;
     }
 
     .auth-section .small.text-decoration-none,
     .auth-section .form-check-label {
-        font-size: 0.8rem !important;
-        /* Slightly smaller for better fit */
-        white-space: nowrap;
+        font-size: 0.75rem !important;
     }
+}
 
-    /* Extra small screen optimization */
-    @media (max-width: 375px) {
-        .auth-section .d-flex.justify-content-between.align-items-center {
-            gap: 5px !important;
-        }
+/* Social Buttons Fix: Equal Width & Height */
+.auth-section .d-flex.justify-content-center.gap-3 {
+    display: flex !important;
+    gap: 0.75rem !important;
+}
 
-        .auth-section .small.text-decoration-none,
-        .auth-section .form-check-label {
-            font-size: 0.75rem !important;
-        }
-    }
-
-    /* Social Buttons Fix: Equal Width & Height */
-    .auth-section .d-flex.justify-content-center.gap-2 {
-        display: flex !important;
-        gap: 0.75rem !important;
-    }
-
-    .auth-section .d-flex.justify-content-center.gap-2 .btn {
-        flex: 1;
-        /* Equal width */
-        padding: 0.5rem 1rem !important;
-        /* Equal padding */
-        height: 42px;
-        /* Fixed height for consistency */
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.85rem !important;
-        white-space: nowrap;
-    }
+.auth-section .d-flex.justify-content-center.gap-3 .btn {
+    flex: 1;
+    /* Equal width */
+    padding: 0.5rem 1rem !important;
+    /* Equal padding */
+    height: 42px;
+    /* Fixed height for consistency */
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem !important;
+    white-space: nowrap;
 }
 
 @media (max-height: 800px) {

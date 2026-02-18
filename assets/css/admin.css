@@ -115,3 +115,53 @@ body.admin-body {
 .stats-card:hover {
     transform: translateY(-3px);
 }
+
+/* Dark Mode Overrides for Dashboard */
+[data-bs-theme="dark"] .card {
+    background-color: #1F2937 !important;
+    border: 1px solid #374151 !important;
+    color: #F9FAFB !important;
+}
+
+[data-bs-theme="dark"] .card-header {
+    background-color: transparent !important;
+    border-bottom: 1px solid #374151 !important;
+    color: #F9FAFB !important;
+}
+
+[data-bs-theme="dark"] .table {
+    color: #F9FAFB !important;
+}
+
+[data-bs-theme="dark"] .table thead,
+[data-bs-theme="dark"] .table thead tr,
+[data-bs-theme="dark"] .table thead th {
+    background-color: #111827 !important;
+    color: #F9FAFB !important;
+    border-color: #374151 !important;
+}
+
+[data-bs-theme="dark"] .table-hover tbody tr:hover {
+    background-color: #374151 !important;
+    color: #FFFFFF !important;
+}
+
+[data-bs-theme="dark"] .text-muted {
+    color: #9CA3AF !important;
+}
+
+[data-bs-theme="dark"] .stats-card {
+    background-color: #1F2937 !important;
+}
+
+[data-bs-theme="dark"] .stats-card .text-muted {
+    color: #9CA3AF !important;
+}
+
+[data-bs-theme="dark"] .stats-card h4 {
+    color: #F9FAFB !important;
+}
+
+[data-bs-theme="dark"] .border-bottom {
+    border-color: #374151 !important;
+}
