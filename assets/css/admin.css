@@ -165,3 +165,109 @@ body.admin-body {
 [data-bs-theme="dark"] .border-bottom {
     border-color: #374151 !important;
 }
+
+/* =============================================
+   Sidebar Visibility Enhancements (Force High Contrast)
+   ============================================= */
+
+/* Ensure Sidebar Background is always Dark Green */
+.sidebar {
+    background-color: #064E3B !important;
+    /* deep forest green */
+}
+
+/* Brand Logo Visibility */
+.sidebar .navbar-brand {
+    color: #FFFFFF !important;
+    font-size: 1.4rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.5px;
+    opacity: 1 !important;
+    text-shadow: none !important;
+    /* Remove any potential blur/shadow */
+    display: flex;
+    align-items: center;
+}
+
+/* NUCLEAR OPTION: Force White Color with ID Selector */
+#sidebarBrand,
+html body .sidebar #sidebarBrand,
+html[data-bs-theme="light"] body .sidebar #sidebarBrand {
+    color: #FFFFFF !important;
+    opacity: 1 !important;
+    text-decoration: none !important;
+}
+
+.sidebar .navbar-brand:hover {
+    color: #FFFFFF !important;
+    opacity: 1 !important;
+}
+
+.sidebar .navbar-brand i {
+    color: #FFFFFF !important;
+}
+
+/* Sidebar Links */
+.sidebar .nav-link {
+    color: #D1FAE5 !important;
+    /* Light Green text */
+    font-weight: 500 !important;
+    opacity: 1 !important;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: #047857 !important;
+    /* Slightly lighter green bg */
+    color: #FFFFFF !important;
+    /* Stark White text */
+}
+
+.sidebar .nav-link i {
+    color: inherit !important;
+}
+
+/* Admin Profile Section Visibility */
+.sidebar .dropdown-toggle {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    /* Bold */
+    opacity: 1 !important;
+    align-items: center;
+}
+
+.sidebar .dropdown-toggle strong {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+}
+
+/* Dropdown Caret (Arrow) - Make it White */
+.sidebar .dropdown-toggle::after {
+    color: #FFFFFF !important;
+    opacity: 1 !important;
+    border-top-color: #FFFFFF !important;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+
+/* Fix for Dark Mode specific overrides that might be causing issues */
+[data-bs-theme="dark"] .sidebar .navbar-brand,
+[data-bs-theme="dark"] .sidebar .dropdown-toggle,
+[data-bs-theme="dark"] .sidebar .nav-link.active {
+    color: #FFFFFF !important;
+}
+
+/* Ensure Dropdown Menu is visible */
+.sidebar .dropdown-menu {
+    background-color: #1F2937;
+    border: 1px solid #374151;
+}
+
+.sidebar .dropdown-item {
+    color: #F3F4F6;
+}
+
+.sidebar .dropdown-item:hover {
+    background-color: #374151;
+    color: #FFFFFF;
+}
