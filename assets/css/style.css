@@ -966,7 +966,7 @@ footer a:hover {
     overflow: hidden !important;
     margin: 0;
     padding: 0;
-    background-color: var(--bg-color);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
 .auth-section {
@@ -1016,7 +1016,7 @@ footer a:hover {
         margin: auto !important;
         display: block !important;
         border: 1px solid var(--navbar-border) !important;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12) !important;
     }
 
     .auth-card::-webkit-scrollbar {
@@ -1035,7 +1035,7 @@ footer a:hover {
         }
 
         .auth-card .card-body {
-            padding: 3.5rem !important;
+            padding: 2.5rem !important;
         }
     }
 
@@ -1051,17 +1051,41 @@ footer a:hover {
     }
 }
 
-/* Main Auth Button Fix - Content aware sizing */
+/* Main Auth Button Fix - Full width sizing */
 .auth-section .btn-primary:not(.btn-sm) {
-    width: auto !important;
-    min-width: 160px !important;
-    max-width: 240px !important;
-    padding: 0.5rem 2rem !important;
-    font-size: 0.95rem !important;
-    display: inline-flex !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    padding: 0.75rem 2rem !important;
+    font-size: 1rem !important;
+    display: flex !important;
     justify-content: center !important;
     align-items: center !important;
 }
+
+/* Ensure consistent input heights */
+.auth-section .form-control {
+    height: 48px !important;
+    padding: 0.75rem 1rem !important;
+}
+
+.auth-section .input-group .form-control {
+    height: 48px !important;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.auth-section .form-control:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 4px rgba(6, 78, 59, 0.1) !important;
+}
+
+.auth-section .input-group .btn {
+    height: 48px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* Layout Fix: Remember Me & Forgot Password in one row */
 .auth-section .d-flex.justify-content-between.align-items-center {
